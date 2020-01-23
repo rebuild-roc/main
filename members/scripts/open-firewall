@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+# 清空各個表內的規則以及用戶定義的鏈：
+for tb in filter nat mangle raw security; do
+    iptables -F -t $tb;
+    iptables -X -t $tb;
+    ip6tables -F -t $tb;
+    ip6tables -X -t $tb;
+done
+
+# 將各個表中內建鏈的策略設置為 ACCEPT:
+
+for chain in INPUT FORWARD OUTPUT; do
+    iptables -t filter -P $chain ACCEPT;
+    ip6tables -t filter -P $chain ACCEPT;
+    iptables -t security -P $chain ACCEPT;
+    ip6tables -t security -P $chain ACCEPT;
+done
+
+for chain in PREROUTING INPUT OUTPUT POSTROUTING; do
+    iptables -t nat -P $chain ACCEPT;
+    ip6tables -t nat -P $chain ACCEPT;
+done
+
+for chain in PREROUTING INPUT OUTPUT FORWARD POSTROUTING; do
+    iptables -t mangle -P $chain ACCEPT;
+    ip6tables -t mangle -P $chain ACCEPT;
+done
+
+for chain in PREROUTING OUTPUT; do
+    iptables -t raw -P $chain ACCEPT;
+    ip6tables -t raw -P $chain ACCEPT;
+done
