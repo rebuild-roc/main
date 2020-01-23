@@ -362,6 +362,22 @@ $ git config --global alias.ls "log --oneline --decorate --graph --all --date-or
 請參看 git 的常規教程，例如其官方網站上所給的文檔，或者查閱 `git` 的聯機手冊。
 
 
+## 四、克隆一個 repo 到本地
+
+### 4.1 把一個本地 repo 克隆為另一個本地 repo
+
+### 4.2 把 GitHub 或 GitLab 上的一個 repo 克隆為本地 repo
+
+### 4.3 在 GitHub 上把一個 repo 克隆為自己的 repo
+
+
+## 五、把本地 repo 推送到 GitHub 或 GitLab 上
+
+### 5.1 首次推送
+
+### 5.2 後續推送和下拉
+
+
 ## 參考文獻
 
 [1] [《如何建立和配置安全的工作環境 (I)》](members/HOWTOs/vm-sys.md)。
