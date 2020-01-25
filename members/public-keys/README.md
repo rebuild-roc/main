@@ -36,11 +36,12 @@
 ```
      $  gpg --fingerprint 0x08807CA8
 ```
-其中 `0x08807CA8` 就是待查看的密鑰的 ID 的一個示例.  以此密鑰為例，上述命令返回
+其中 `0x08807CA8` 就是待查看的密鑰的 ID 的一個示例。以此密鑰為例，上述命令返回
 ```
 pub   rsa4096 2020-01-22 [SC]
       2403 FA48 4591 84CB AC3B  1933 5497 5410 0880 7CA8
-uid           [ultimate] Rebuilding ROC (戡亂復國) &lt;rebuild-roc@ctemplar.com&gt;
+uid           [ultimate] to Rebuild ROC (戡亂復國) <rebuild-roc@ctemplar.com>
+uid           [ultimate] Rebuilding ROC (戡亂復國) <rebuild-roc@ctemplar.com>
 sub   rsa4096 2020-01-22 [E]
 
 ```
