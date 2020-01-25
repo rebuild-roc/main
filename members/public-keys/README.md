@@ -65,6 +65,10 @@ $ gpg --armor -o rebuild-roc --export 0x08807CA8
 
 ## 四、常用的 openPGP 密鑰服務器
 
+因為 GitHub 和 GitLab 都有可能會因為中共當局的壓力而關閉參與者的賬號，所以，建議
+每一個參與者把自己的 openPGP 公開密鑰置於本目錄的同時，還要把這些公開密鑰上傳到
+互聯網上的各個 openPGP 密鑰服務器。
+
 **無論是把自己的 openPGP 公開密鑰傳送到密鑰服務器上，還是反過來從密鑰服務器上
 索取別人的 openPGP 公開密鑰，都不要使用 `gpg` 聯網操作，**
 因為稍有不慎就有可能暴露自己的蹤跡，被中共當局找上門來。**安全的方法是通過
@@ -77,11 +81,21 @@ $ gpg --armor -o rebuild-roc --export 0x08807CA8
 當我們需要散播自己的 openPGP 公開密鑰時，只要上傳到這裡所列的服務器就夠了。
 * https://keys.openpgp.org/
 * https://pgp.mit.edu/
-* https://keyring.debian.org/
+* https://keyring.debian.org/  (?)
 * https://keyserver.ubuntu.com/
 * https://zimmermann.mayfirst.org/
 
 
 ## 五、怎樣把別人的 openPGP 公開密鑰導入自己的密鑰環
 
-**在操作之前，請仔細閱讀第四節的第一段！**
+**在操作之前，請仔細閱讀第四節的第二段！**
+
+假設要導入的公開密鑰保存在文件 `pubkey_file` 中，要把它導入自己的公開密鑰環，則
+執行指令
+```
+$ gpg --import pubkey_file
+
+```
+
+基於第四節所說的安全理由，千萬不要使用 `gpg --recv-keys` 這個指令，因為它會
+聯網搜索和下載公開密鑰，而這有可能被中共當局抓到線索。
