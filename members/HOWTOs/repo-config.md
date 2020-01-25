@@ -362,21 +362,135 @@ $ git config --global alias.ls "log --oneline --decorate --graph --all --date-or
 請參看 git 的常規教程，例如其官方網站上所給的文檔，或者查閱 `git` 的聯機手冊。
 
 
-## 四、克隆一個 repo 到本地
+## 四、本地 repo 與 GitHub 或 GitLab 上的遠端 repo 交換數據
 
-### 4.1 把一個本地 repo 克隆為另一個本地 repo
+設想我們現在有一個本地 repo（其路徑為 `my_src`），其中已經有一些提交，不再是
+空的。假設這個 repo 在 GitHub 上不存在對應的遠端 repo，我們想把它推送到 GitHub
+上，然後把 GitHub 上的遠端 repo 設置為公開的，從而使其他 GitHub 用戶可以看到它，
+乃至可以與您合作。
 
-### 4.2 把 GitHub 或 GitLab 上的一個 repo 克隆為本地 repo
+不管 `my_scr` 這個本地 repo 是在本地從無到有一點點建起來的，還是從其他地方克隆
+過來的（方法建第五節），向 GitHub 推送的方法是一樣的。類似方法也可以用於向
+GitLab 推送。
 
-### 4.3 在 GitHub 上把一個 repo 克隆為自己的 repo
+### 4.1 建立遠端 repo
+
+假設您在 GitHub 上沒有對應於 `my_scr` 的 repo，現在要把後者推送到您在 GitHub
+的賬號下，在那裡建立 `my_src` 的一個遠端 repo。假設您在 GitHub 上的用戶名為
+`username`，您打算把 GitHub 上即將建立的遠端 repo 命名為 `my_remote`，然後在
+`my_src` 中用代號 `github` 來指代這個名為 `my_remote` 的遠端 repo。
+
+在正式操作之前，除了保證本地的 `my_src` 不空之外，需要您的整個工作環境（參看
+[1][2]）已經運作正常。建立遠端 repo 的步驟如下。
+1. 用 `cd` 命令切換當前工作目錄到 `my_scr`，如下：
+    ```
+    $ cd my_src
+    ```
+2. 為 `my_src` 設置其遠端 repo。如前所述，您打算把 `my_src` 在 GitHub 上的遠端
+    repo 命名為 `my_remote`，使之位於您在 GitHub 的賬號 `username` 名下（當該
+    遠端 repo 存在時，其網址將是 <https://github.com/username/my_remote>），並在
+    本地的 `my_src` 中用代號 `github` 指代這個遠端 repo。設置指令為
+    ```
+    $ git remote add github https://github.com/username/my_remote.git
+    ```
+    **從此之後，在本地 repo `my_src` 中就可以用 github 來指代這個遠端 repo
+    了。**
+    當然，您可以不用 github 這個代號，而改為別的，例如 foo 等等，這只要把上述
+    命令改為 `git remote add foo https://github.com/username/my_remote.git`
+    即可。
+
+    如果您在 GitLab 上也有一個賬號 `username`，也要把該賬號下的 `my_remote`
+    設置為 `my_src` 的遠端 repo，並且用 gitlab 來指代後者，則設置指令為
+    ```
+    $ git remote add gitlab https://gitlab.com/username/my_remote.git
+    ```
+3. 假設 `my_src` 這個 repo 中除了默認分支 `master` 外，還有分支 `draft`，
+    `branch1`，`branch2` 等等。現在 GitHub 上的遠端 repo `my_remote` 還不存在，
+    需要您[登錄到 GitHub](https://github.com/login) 的賬號 `username` 上，在其中
+    創建一個新的 repo （不熟悉 GitHub 操作的讀者可以在登錄後直接打開
+    https://github.com/new 這個網頁），把我們要建的 repo 名稱 `my_repo` 填寫到
+    網頁上 "Repository name" 下面的空白處，如下圖所示。
+
+    ![在 GitHub 上創建新倉庫](members/HOWTOs/create-repo-github.png)
+
+    在 "Description (optional)" 下面的空白處可以填寫關於這個 repo 的簡單描述，
+    也可以不寫而留待將來修改。再下面的 "Public" 和 "Private" 是二選一的，默認
+    選擇 "Public" 表示該 repo 的內容可以被任何人（包括不登錄 GitHub 的用戶）看
+    到，而 "Private" 則表示其內容只有您或您允許的人才可以看到。因為我們需要一個
+    空的 repo 以便把工作平臺上的 `my_src` 的內容推送進來，所以**上圖中最後一行
+    "Initialize this repository with a README （添加文件 README 之後初始化本
+    repo）左邊的勾選框一定要空着，不要勾選它。**
+
+    在同一個網頁中，再向下一行（已經超出了上圖的範圍，見下圖）有
+    "Add .gitignore: None" 和 "Add a license: None"，保持這兩處不變。然後點擊
+    它們下面一行中的綠色按鈕 "Create repository"，一般說來就會成功地創建出空白
+    的 repo `my_remote`。
+
+    ![在 GitHub 上創建新倉庫](members/HOWTOs/create-repo-github-1.png)
+
+    **如果是往 GitLab 上推送，這一步不需要做。**
+
+4. 之後，在您的工作平臺上，還是在目錄 `my_src` 上，開始把 `my_src` 的內容推送
+    到上面一步所建立的遠端 repo https://github.com/username/my_remote 中去。
+    假設您打算把本地的分支 `master` 和 `draft` 以及 `branch1` 推送到上述遠端
+    repo 中，而本地分支 `branch2` 等等不予推送，則執行指令
+    ```
+    $ torsocks -i git push -u github master draft branch1
+    ```
+    屆時 GitHub 會要求您提供用戶名和密碼（或者您預先在 GitHub 上設置好以 SSH
+    密鑰認證）。只要您提交的用戶名 `username` 和密碼都是正確的，網絡通訊有沒有
+    錯誤，推送就會成功。成功後，互聯網上所有用戶都可以通過網址
+    https://github.com/username/my_remote 查看您所推送上去的內容，而且 GitHub
+    用戶願意的話，可以通過 GitHub 和您展開合作。
+
+    上述命令實際上是兩條指令合成的，一條是 `torsocks -i` 加一個正常指令，而這個
+    正常指令就是 `git push -u github master draft branch1`。真正要推送並建立遠端
+    repo 的就是後面這條指令，但是它會暴露您的 IP 地址，於是中共當局尋蹤而至，於
+    是後面的事情就不堪設想了。現在把這條正常命令跟在 `torsocks -i` 之後，是要讓
+    `torsocks` 把這條正常命令通過 Tor 網絡傳送到 GitHub 上，於是中共當局就無法
+    追蹤到您了。在這裡，`torsocks` 的選項 `-i` 要求使用一條獨立的 Tor 管道，以免
+    中共當局通過您對 Tor 網絡的其他用途把您找到——比如您在 YouTube 上有一個實名的
+    賬號，現在也用 Tor 連接着，而中共當局用黑客手段或流氓政治手段從 YouTube 拿到
+    了您的信息，那就可以找到您了（這方面的注意事項
+    請閱讀[編程隨想](https://program-think.blogspot.com)的相關文章）——給
+    `torsocks` 加上 `-i` 選項可以把您到 GitHub 的 Tor 管道變成一個專用的管道，讓
+    中共無法拼湊線索。
+
+    這也是我在文獻 [1] 和 [2] 中主張把
+    [Tor 瀏覽器](https://www.torproject.org)安置在工作平臺中的原因之一。這樣做
+    有兩重保險：第一，因為工作平臺是專門從事危險操作的場所，只要您遵守操作規範，
+    所有能夠暴露您身份的那些翻牆動作（例如連接 YouTube）都不會發生在您的工作平臺
+    中；第二，`torsocks -i` 的選項 `-i` 又增加了一重保險。如果 Tor 瀏覽器不在
+    工作平臺中，則上述第一重保險很容易被破壞。
+
+    但是，上述的第二重保險也很容易由於操作失誤而遭到破壞——例如，您忘記使用
+    `torsocks -i` 命令，而直接使用 `git push` 命令——這時候，如果工作環境工作
+    正常，直接使用 `git push` 命令會失敗，可是，如果整個工作環境出現了紕漏，竟然
+    成功地連接上了 GitHub，而您又渾然不知地提供了用戶名和密碼使得推送成功，而
+    中共當局居然黑進了 GitHub 拿到了您的登錄信息，那麼事情就不是請您喝茶這麼
+    簡單了。所以，**推送這一步操作才是危險所在，必須慎之又慎。**
+
+    類似地，用指令
+    ```
+    $ torsocks -i git push -u gitlab master draft branch1
+    ```
+    可以推送到 GitLab 上創建一個名為 `my_remote` 的遠端 repo，其中含有分支
+    `master`、`draft` 和 `branch1`。
+
+**上述操作都是一次性的。**
 
 
-## 五、把本地 repo 推送到 GitHub 或 GitLab 上
+### 4.2 向遠端 repo 推送和從遠端 repo 下拉
 
-### 5.1 首次推送
 
-### 5.2 後續推送和下拉
 
+## 五、克隆一個 repo 到本地
+
+### 5.1 把一個本地 repo 克隆為另一個本地 repo
+
+### 5.2 把 GitHub 或 GitLab 上的一個 repo 克隆為本地 repo
+
+### 5.3 在 GitHub 上把一個 repo 克隆為自己的 repo
 
 ## 參考文獻
 
