@@ -36,11 +36,12 @@
 ```
      $  gpg --fingerprint 0x08807CA8
 ```
-其中 `0x08807CA8` 就是待查看的密鑰的 ID 的一個示例.  以此密鑰為例，上述命令返回
+其中 `0x08807CA8` 就是待查看的密鑰的 ID 的一個示例。以此密鑰為例，上述命令返回
 ```
 pub   rsa4096 2020-01-22 [SC]
       2403 FA48 4591 84CB AC3B  1933 5497 5410 0880 7CA8
-uid           [ultimate] Rebuilding ROC (戡亂復國) &lt;rebuild-roc@ctemplar.com&gt;
+uid           [ultimate] to Rebuild ROC (戡亂復國) <rebuild-roc@ctemplar.com>
+uid           [ultimate] Rebuilding ROC (戡亂復國) <rebuild-roc@ctemplar.com>
 sub   rsa4096 2020-01-22 [E]
 
 ```
@@ -60,3 +61,41 @@ $ gpg --armor -o rebuild-roc --export 0x08807CA8
 ```
 即可輸出其公鑰 `0x08807CA8` 至文件 `rebuild-roc` 中。在上述指令中，選項
 `--armor` 要求輸出的數據都是字符形式的。
+
+
+## 四、常用的 openPGP 密鑰服務器
+
+因為 GitHub 和 GitLab 都有可能會因為中共當局的壓力而關閉參與者的賬號，所以，建議
+每一個參與者把自己的 openPGP 公開密鑰置於本目錄的同時，還要把這些公開密鑰上傳到
+互聯網上的各個 openPGP 密鑰服務器。
+
+**無論是把自己的 openPGP 公開密鑰傳送到密鑰服務器上，還是反過來從密鑰服務器上
+索取別人的 openPGP 公開密鑰，都不要使用 `gpg` 聯網操作，**
+因為稍有不慎就有可能暴露自己的蹤跡，被中共當局找上門來。**安全的方法是通過
+[Tor 瀏覽器](https://www.torproject.org)連接密鑰服務器的網頁，通過網頁進行
+上傳或下載密鑰的操作。**
+
+我們這裡列一些密鑰服務器的網址。雖然不夠全面，也不可能全面，但是，大多數公開密鑰
+服務器之間會互通有無，所以我們這裡列出的服務器（來源：[維基百科
+英文版](https://en.wikipedia.org/wiki/Key_server_(cryptographic))）基本上夠用。
+當我們需要散播自己的 openPGP 公開密鑰時，只要上傳到這裡所列的服務器就夠了。
+* https://keys.openpgp.org/
+* https://pgp.mit.edu/
+* https://keyring.debian.org/  (?)
+* https://keyserver.ubuntu.com/
+* https://zimmermann.mayfirst.org/
+
+
+## 五、怎樣把別人的 openPGP 公開密鑰導入自己的密鑰環
+
+**在操作之前，請仔細閱讀第四節的第二段！**
+
+假設要導入的公開密鑰保存在文件 `pubkey_file` 中，要把它導入自己的公開密鑰環，則
+執行指令
+```
+$ gpg --import pubkey_file
+
+```
+
+基於第四節所說的安全理由，千萬不要使用 `gpg --recv-keys` 這個指令，因為它會
+聯網搜索和下載公開密鑰，而這有可能被中共當局抓到線索。
