@@ -94,20 +94,21 @@
 ## 本 Repo 的文章目錄
 
 0. [README.md](./README.md)，本文件
-1. 原理性、規劃方面的文章
+1. [寫在武漢肺炎爆發之際（代前言）](./preface.md)
+2. 原理性、規劃方面的文章
     * [平亂行動概略](principles/outline.md)
     * [以信息技術和貨幣戰爭推翻中共極權統治](principles/outline-2015.md)
 
-      原 <http://cyber-china.blogspot.com/> 和 <https://github.com/infcn/blog>
+      原 <https://cyber-china.blogspot.com/> 和 <https://github.com/infcn/blog>
       中的文章，HTML 格式（可下載後用瀏覽器閱讀），作於 2015 年，一字未改收錄於
       此。文章中所列網址、email 地址以及 openPGP 密鑰等目前一概停用，未來若啟用
       時，會用我現在的 openPGP 密鑰和該文中的 openPGP 密鑰共同簽署一份啟用說明。
     * [中共政治是毒蠱政治](principles/analysis-CCP.md)
-2. 與參與者密切相關的文章
+3. 與參與者密切相關的文章
     * [參與者的 openPGP 公鑰列表](members/public-keys/README.md)
     * [如何建立和配置安全的工作環境 (I)](members/HOWTOs/vm-sys.md)
     * [如何建立和配置安全的工作環境 (II)](members/HOWTOs/single-vm.md)
-3. 腳本
+4. 腳本
     * [完全開放防火牆的腳本](member/scripts/open-firewall)
     * [單虛擬機方案中的防火牆設置腳本](member/scripts/single-vm-firewall)
 
