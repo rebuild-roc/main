@@ -18,7 +18,7 @@
 #      的遠端倉庫，則在命令行中執行
 #		make push
 #      如果需要強行推送，即，對 git push 增加選項 --force，則在命令行中執行
-#      		make forcepush
+#      		make push-forced
 #    (2) 從 GitHub 和 GitLab 的遠端倉庫下拉某些分支到本地倉庫，則
 #      在命令行中執行
 #		make pull
@@ -64,7 +64,7 @@
 #
 ################################################################
 
-.PHONY: help clean create push forcepush pull fetch
+.PHONY: help clean create push push-forced pull fetch
 
 TORSOCKS = torsocks
 GIT = git
@@ -87,6 +87,6 @@ push pull fetch:
 	$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
 	$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
 
-forcepush:
+push-forced:
 	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
 	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
