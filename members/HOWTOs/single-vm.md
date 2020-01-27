@@ -899,8 +899,8 @@ GitLab 交互之前最好都悉數執行一遍。為了方便，我們把這些�
 中，其中完全開放防火牆（即清空防火牆內的所有規則，並把所有鏈的策略都設置為
 ACCEPT）的那些指令都放置在 `members/scripts/open-firewall` 中，而所有的規則都
 放置在 `members/scripts/single-vm-firewall` 中。所以，以後要想把您的工作平臺變成
-不設防的操作系統，則以超級用戶身份用 `cd` 命令把當前工作目錄改到
-`members/scripts/` 之後，再執行
+不設防的操作系統，則以超級用戶身份用 `cd` 命令把工作目錄改到 `members/scripts/`
+之後，再執行
 ```
 # ./open-firewall
 ```
