@@ -91,7 +91,7 @@
 但是，**請在正式行動前閱讀[參與者須知](./members/HOWTOs/README.md)。這很重要！**
 
 
-## 本 Repo 的文章目錄
+## 本 Repo 的文檔目錄
 
 0. [README.md](./README.md)，本文件
 1. [寫在武漢肺炎爆發之際（代前言）](./preface.md)
@@ -110,7 +110,8 @@
     * [參與者的 openPGP 公鑰列表](members/public-keys/README.md)
     * [如何建立和配置安全的工作環境 (I)](members/HOWTOs/vm-sys.md)
     * [如何建立和配置安全的工作環境 (II)](members/HOWTOs/single-vm.md)
-4. 腳本
+4. 腳本（詳細說明載於該目錄下的文件 [README.md](members/scripts/README.md)）
+    * [Makefile](members/scripts/Makefile)
     * [完全開放防火牆的腳本](member/scripts/open-firewall)
     * [單虛擬機方案中的防火牆設置腳本](member/scripts/single-vm-firewall)
 
