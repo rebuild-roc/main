@@ -6,10 +6,10 @@
 DNS_SERVERS="64.6.64.6 64.6.65.6 9.9.9.9"
 
 # 虛擬機中的網關：
-NAT_GATEWAY=10.0.2.2
+GATEWAY=10.0.2.2
 
 # 宿主機中翻牆軟件（代理）的監聽端口：
-HOST_PROXY_PORT=8110
+GW_PROXY_PORT=8110
 
 
 ################################################################
@@ -30,7 +30,7 @@ for dns_server in $DNS_SERVERS; do
 done
 
 # 放行發往宿主機內翻牆軟件的數據包：
-iptables -A OUTPUT -p tcp -d $NAT_GATEWAY --dport $HOST_PROXY_PORT -j ACCEPT
+iptables -A OUTPUT -p tcp -d $GATEWAY --dport $GW_PROXY_PORT -j ACCEPT
 
 # 本機對本機完全開放：
 iptables -t filter -A INPUT -s 127.0.0.1 -j ACCEPT
