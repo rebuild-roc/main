@@ -501,6 +501,9 @@ GitLab 推送。
     ```
     可以推送到 GitLab 上創建一個名為 `my_remote` 的遠端 repo，其中含有分支
     `master`、`draft` 和 `branch1`。
+    **不過，這樣創建在 GitLab 上的遠端 repo 是一個私密的 (private) repo，只有
+    您自己在登錄 GitLab 的情況下才能看到其中內容。要想讓任何人都能看到（不管是否
+    登錄 GitLab），還需要您登錄到 GitLab 上把它改為公開的 repo。**
 
 **上述操作都是一次性的。**
 
