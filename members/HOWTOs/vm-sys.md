@@ -9,13 +9,14 @@
     是為了讓讀者有一個總體的把握。有很多細節可以參考編程隨想的博客。
 
 ---
-> 本文是[《如何建立和配置安全的工作環境 (II)》](members/HOWTOs/single-vm.md)的
-姐妹篇，為了減小讀者的閱讀負擔，我把這兩篇文章當成兩篇獨立的文章，讀者可以根據
-自己的具體情形選擇其中之一來閱讀，所以，兩篇文章中有很多內容相互重複，為的就是
-不需要讀者把兩篇文章都拿來閱讀。
+> 本文是[《如何建立和配置安全的工作環境 (II)》](single-vm.md)的姐妹篇，為了減小
+讀者的閱讀負擔，我把這兩篇文章當成兩篇獨立的文章，讀者可以根據自己的具體情形
+選擇其中之一來閱讀，所以，兩篇文章中有很多內容相互重複，為的就是不需要讀者把兩篇
+文章都拿來閱讀。
 ---
 
-我們的[平亂行動](principles/outline.md)是一個**匿蹤和公開** (anonymous & open)
+我們的[平亂行動](../../principles/outline.md)是一個**匿蹤和公開** (anonymous &
+open)
 的行動。在這篇文章里，我們不介紹如何公開合作，而只是介紹如何做到匿蹤。在這裡，我
 把 anonymous 翻譯為「匿蹤」而不是通常的「匿名」，是為了強調，我們不但要隱藏我們
 的真實姓名，還要隱藏我們的 IP 地址等一切可能暴露我們身份的蹤跡。
@@ -270,11 +271,11 @@ Tor 瀏覽器。在這種情形下，
 無論上述兩種情形中的哪一種，Tor 瀏覽器的代理設置都是相似的，方法如下：
 1. 當 Tor 瀏覽器剛剛啟動時，一旦看到下圖的界面就點擊 "Cancel" 按鈕；
 
-    ![start tor browser](members/HOWTOs/start-tor-browser.png)
+    ![start tor browser](start-tor-browser.png)
 
 2. 如果看到了下面的界面，則點擊其中的 "Configure" 按鈕；
 
-    ![Connect and Config](members/HOWTOs/tor-conn-config.png)
+    ![Connect and Config](tor-conn-config.png)
 
 3. 在下圖所示的界面內，不要勾選 "Tor is censored in my country"，而是勾選
   "I use a proxy to connect to the Internet"，然後在 "Proxy Type" 中選擇合適的
@@ -284,7 +285,7 @@ Tor 瀏覽器。在這種情形下，
   監聽端口（如果 Tor 運行在前端平臺內，此處為翻牆軟件的監聽端口；如果在工作平臺
   內，此處為前端平臺內 privoxy 的監聽端口）。
 
-    ![Tor Configure](members/HOWTOs/tor-configure.png)
+    ![Tor Configure](tor-configure.png)
 
 4. 上述工作完成後，點擊右下角的 "Connect" 按鈕，靜候結果，如果聯網失敗，則需要
   根據出錯信息逐步排除整個配置中的錯誤。配置錯誤可能發生在前端平臺中，可能發生在
@@ -363,7 +364,7 @@ Windows 系統那樣含混不清，所以，只要
 
 就可以很好地隱匿致命信息了。我們下面幾個小節就是要講解哪些軟件的相關文件和目錄
 需要放置到統一的加密盤中。至於如何隱匿加密盤，我們將在[《如何在 Linux
-系統中隱藏致命信息》](members/HOWTOs/hiding_fs.md)裡面專門討論。
+系統中隱藏致命信息》](hiding_fs.md)裡面專門討論。
 
 能夠製作加密盤的軟件有很多，具體的工作方式也不盡相同，但還是有一些共性。我們這裡
 要考慮的這類軟件都有這樣一些共性：
@@ -379,7 +380,7 @@ Windows 系統那樣含混不清，所以，只要
   第 2 點中所呈現出來的塊設備就消失了，所有的信息都以加密的形式存儲於加密盤中。
 
 如何進行上述操作，以及如何隱藏加密盤，是[《如何在 Linux
-系統中隱藏致命信息》](members/HOWTOs/hiding_fs.md)所要討論的，本文只討論哪些信息
+系統中隱藏致命信息》](hiding_fs.md)所要討論的，本文只討論哪些信息
 必須要存儲於加密盤中，也就是把相關的文件和目錄移送到上述第 3 點中所說的掛載點
 中。
 
@@ -854,21 +855,21 @@ profile 是裸奔上網的設置，用於測試目的。如果採用這個 profi
 
 ### 4.6 git 和 repo 的配置
 
-[git](https://git-scm.com/) 是參與[平亂行動](principles/outline.md)的主要工具
-之一，也是與 [GitHub](https://github.com) 和 [GitLab](https://gitlab.com)
+[git](https://git-scm.com/) 是參與[平亂行動](../../principles/outline.md)的
+主要工具之一，也是與 [GitHub](https://github.com) 和
+[GitLab](https://gitlab.com)
 等網站互動的工具，它的配置信息有可能會暴露您的工作平臺賬戶和 GitHub 以及 GitLab
 賬戶之間的關聯，所以必須重視 git 的配置。
 
 這方面的內容比較繁雜也比較重要，我們把它放到[《如何創建和配置自己的本地及遠端
-Repo》](members/HOWTOs/repo-config.md)一文中專門講述。
+Repo》](repo-config.md)一文中專門講述。
 
 
 ### 4.7 防火牆的配置
 
 對於本文所描述的工作環境，工作平臺中的防火牆不需要特別配置，原則上使用操作系統
 配備的防火牆即可。對防火牆配置比較熟悉的用戶可以參照本系列第二篇[《如何建立和
-配置安全的工作環境 (II)》](members/HOWTOs/single-vm.md)中的《防火牆的配置》一
-節。
+配置安全的工作環境 (II)》](single-vm.md)中的《防火牆的配置》一節。
 
 ## 五、後記
 
@@ -878,7 +879,7 @@ Repo》](members/HOWTOs/repo-config.md)一文中專門講述。
 
 事實上，對於工作平臺為虛擬機的情形，如果其防火牆配置得足夠好，則宿主機就可以
 充當本文中所說的前端平臺。對於這種情形，我們將在[《如何建立和配置安全的工作環境
-(II)》](members/HOWTOs/single-vm.md)中介紹。
+(II)》](single-vm.md)中介紹。
 
 ## 參考文獻
 

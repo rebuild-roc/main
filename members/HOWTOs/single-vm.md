@@ -9,14 +9,14 @@
     有一個總體的把握。有很多細節可以參考編程隨想的博客。
 
 ---
-> 本文是[《如何建立和配置安全的工作環境 (I)》](members/HOWTOs/vm-sys.md)的姐妹
+> 本文是[《如何建立和配置安全的工作環境 (I)》](vm-sys.md)的姐妹
 篇，為了減小讀者的閱讀負擔，我把這兩篇文章當成兩篇獨立的文章，讀者可以根據自己的
 具體情形選擇其中之一來閱讀，所以，兩篇文章中有很多內容相互重複，為的就是不需要
 讀者把兩篇文章都拿來閱讀。
 ---
 
-我們的[平亂行動](principles/outline.md)是一個**匿蹤和公開** (anonymous & open)
-的行動。
+我們的[平亂行動](../../principles/outline.md)是一個**匿蹤和公開** (anonymous &
+open) 的行動。
 在這篇文章里，我們不介紹如何公開合作，而只是介紹如何做到匿蹤。在這裡，我把
 anonymous 翻譯為「匿蹤」而不是通常的「匿名」，是為了強調，我們不但要隱藏我們的
 真實姓名，還要隱藏我們的 IP 地址等一切可能暴露我們身份的蹤跡。
@@ -97,8 +97,8 @@ anonymous 翻譯為「匿蹤」而不是通常的「匿名」，是為了強調�
   虛擬機，其中運行着 [Tor 瀏覽器](https://www.torproject.org/download)以實現
   虛擬機內其他軟件聯網的匿蹤。虛擬機能夠用於編輯文檔、版本控制、與
   [GitHub](https://github.com) 和 [GitLab](https://gitlab.com) 交換信息，收發
-  email 等等一切與[平亂行動](principles/outline.md)有直接關係的工作。我們把它
-  叫做**工作平臺**。
+  email 等等一切與[平亂行動](../../principles/outline.md)有直接關係的工作。我們
+  把它叫做**工作平臺**。
 * Tor 是迄今為止匿蹤功能做得最好的一個軟件。一個匿蹤軟件的成功取決於兩個必不可少
   的條件：一是軟件本身的設計和編碼質量要足夠好；二是用戶群體要足夠龐大，因為，
   一個小眾的軟件會因為鶴立雞群而暴露用戶的行蹤。Tor 瀏覽器（嚴格地說，應為
@@ -111,7 +111,7 @@ anonymous 翻譯為「匿蹤」而不是通常的「匿名」，是為了強調�
 ## 三、宿主機操作系統一側的配置
 
 我們不打算在此泛泛地討論如何配置宿主機操作系統，而只討論與我們的工作環境和[平亂
-行動](principles/outline.md)相關的一些配置事項。
+行動](../../principles/outline.md)相關的一些配置事項。
 
 ### 3.1 翻牆方法
 
@@ -250,7 +250,7 @@ Windows 系統那樣含混不清，所以，只要
 
 就可以很好地隱匿致命信息了。我們下面幾個小節就是要講解哪些軟件的相關文件和目錄
 需要放置到統一的加密盤中。至於如何隱匿加密盤，我們將在[《如何在 Linux
-系統中隱藏致命信息》](members/HOWTOs/hiding_fs.md)裡面專門討論。
+系統中隱藏致命信息》](hiding_fs.md)裡面專門討論。
 
 能夠製作加密盤的軟件有很多，具體的工作方式也不盡相同，但還是有一些共性。我們這裡
 要考慮的這類軟件都有這樣一些共性：
@@ -266,7 +266,7 @@ Windows 系統那樣含混不清，所以，只要
   第 2 點中所呈現出來的塊設備就消失了，所有的信息都以加密的形式存儲於加密盤中。
 
 如何進行上述操作，以及如何隱藏加密盤，是[《如何在 Linux
-系統中隱藏致命信息》](members/HOWTOs/hiding_fs.md)所要討論的，本文只討論哪些信息
+系統中隱藏致命信息》](hiding_fs.md)所要討論的，本文只討論哪些信息
 必須要存儲於加密盤中，也就是把相關的文件和目錄移送到上述第 3 點中所說的掛載點
 中。
 
@@ -341,11 +341,11 @@ $ /path/to/tor-browser_en-US/Browser/start-tor-browser &
 所得目錄 `tor-browser_en-US` 的絕對路徑。之後就進入 Tor 瀏覽器的設置過程：
 1. 當 Tor 瀏覽器剛剛啟動時，一旦看到下圖的界面就點擊 "Cancel" 按鈕；
 
-    ![start tor browser](members/HOWTOs/start-tor-browser.png)
+    ![start tor browser](start-tor-browser.png)
 
 2. 如果看到了下面的界面，則點擊其中的 "Configure" 按鈕；
 
-    ![Connect and Config](members/HOWTOs/tor-conn-config.png)
+    ![Connect and Config](tor-conn-config.png)
 
 3. 在下圖所示的界面內，不要勾選 "Tor is censored in my country"，而是勾選
   "I use a proxy to connect to the Internet"，然後在 "Proxy Type" 中選擇合適的
@@ -353,12 +353,12 @@ $ /path/to/tor-browser_en-US/Browser/start-tor-browser &
   IP 地址 `10.0.2.2`，在 "Port" 後面填寫 Tor 所使用的代理（即宿主機內普通翻牆
   軟件）的監聽端口，具體數值要根據翻牆軟件的設置填寫，圖中的 8118 只是示例而已。
 
-    ![Tor Configure](members/HOWTOs/tor-configure.png)
+    ![Tor Configure](tor-configure.png)
 
 4. 上述工作完成後，點擊右下角的 "Connect" 按鈕，靜候結果，成功後應當出現如下圖
   所示的 Tor 瀏覽器窗口。如果聯網失敗，則需要根據出錯信息逐步排除整個配置中的
   錯誤。
-    ![Tor Browser](members/HOWTOs/tor-browser.png)
+    ![Tor Browser](tor-browser.png)
 
 
 以上設置過程在每次運行 Tor 瀏覽器時都會經歷。除此之外，還有一個一次性的工作：
@@ -789,13 +789,14 @@ profile 是裸奔上網的設置，用於測試目的。如果採用這個 profi
 
 ### 4.7 git 和 repo 的配置
 
-[git](https://git-scm.com/) 是參與[平亂行動](principles/outline.md)的主要工具
-之一，也是與 [GitHub](https://github.com) 和 [GitLab](https://gitlab.com)
+[git](https://git-scm.com/) 是參與[平亂行動](../../principles/outline.md)的
+主要工具之一，也是與 [GitHub](https://github.com) 和
+[GitLab](https://gitlab.com)
 等網站互動的工具，它的配置信息有可能會暴露您的工作平臺賬戶和 GitHub 以及 GitLab
 賬戶之間的關聯，所以必須重視 git 的配置。
 
 這方面的內容比較繁雜也比較重要，我們把它放到[《如何創建和配置自己的本地及遠端
-Repo》](members/HOWTOs/repo-config.md)一文中專門講述。
+Repo》](repo-config.md)一文中專門講述。
 
 
 ### 4.8 防火牆的配置
