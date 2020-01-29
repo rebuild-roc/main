@@ -50,8 +50,9 @@
 必須具備以下條件——
 
 第一，必須搭建好自己的**工作環境**。這個工作環境的主要功能有三個：
-1. 從事[平亂行動](principles/outline.md)所需要的具體工作，例如撰寫文章或編制軟件
-  源代碼、管理這些文章或源代碼（也就是 repo）、與 [GitHub](https://github.com)
+1. 從事[平亂行動](../../principles/outline.md)所需要的具體工作，例如撰寫文章或
+  編制軟件源代碼、管理這些文章或源代碼（也就是 repo）、與
+  [GitHub](https://github.com)
   和/或 [GitLab](https://gitlab.com) 上的對應 repo 交換數據、通過 GitHub 和/或
   GitLab 與其他參與者協同工作，等等；
 2. 在從事上述工作的過程中，我們的工作環境還負責隱藏我們的網址，讓中共難以追查；
@@ -59,9 +60,8 @@
   也難以獲得直接證據（中共當局使用酷刑或者威脅親屬則另當別論）。
 
 參照[編程隨想](https://program-think.blogspot.com)的經驗和指導，我設計了兩種
-工作環境供大家參考，分別在[《如何建立和配置安全的工作環境
-(I)》](members/HOWTOs/vm-sys.md)和[《如何建立和配置安全的工作環境
-(II)》](members/HOWTOs/single-vm.md)中加以介紹。
+工作環境供大家參考，分別在[《如何建立和配置安全的工作環境 (I)》](vm-sys.md)
+和[《如何建立和配置安全的工作環境 (II)》](single-vm.md)中加以介紹。
 
 能夠實現上述第 1 項和第 3 項功能的那臺計算機（可以是實體計算機，也可以是虛擬機）
 叫做**工作平臺**，它是我們所說的工作環境的一個組成部分。下面所說的全部操作都要在
@@ -98,10 +98,10 @@ email 賬號的原因。另外，如果有一天平亂行動在 GitHub 和 GitLa
 第四，參與者需要在自己的工作平臺上生成至少一套 openPGP 密鑰對（包括一個公開密鑰
 和一個私人密鑰）。生成 openPGP 密鑰對的常用軟件就是
 [gnupg](https://gnupg.org/)，這在各個 Linux 發行版中都是標準配備的軟件，具體操作
-過程另有[專門討論](members/HOWTOs/gpg.md)。在生成 openPGP 密鑰對的過程中會用到
-一個關聯的 email 地址，這就是前面所註冊並提交給 GitHub 的那個。生成之後，請將
-此密鑰對中的公開密鑰和與之關聯的 email 地址以及 GitHub 中的用戶名一併提交到本
-repo 中，具體手續另有[專文講述](members/HOWTOs/README.md)。
+過程另有[專門討論](gpg.md)。在生成 openPGP 密鑰對的過程中會用到一個關聯的 email
+地址，這就是前面所註冊並提交給 GitHub 的那個。生成之後，請將此密鑰對中的公開密鑰
+和與之關聯的 email 地址以及 GitHub 中的用戶名一併提交到本 repo 中，具體手續
+另有[專文講述](README.md)。
 
 在平亂行動中，openPGP 密鑰對有如下用途：
 1. **openPGP 密鑰對中的私人密鑰是我們認定一個參與者的唯一憑據**。一個參與者不會
@@ -411,7 +411,7 @@ GitLab 推送。
     https://github.com/new 這個網頁），把我們要建的 repo 名稱 `my_repo` 填寫到
     網頁上 "Repository name" 下面的空白處，如下圖所示。
 
-    ![在 GitHub 上創建新倉庫](members/HOWTOs/create-repo-github.png)
+    ![在 GitHub 上創建新倉庫](create-repo-github.png)
 
     在 "Description (optional)" 下面的空白處可以填寫關於這個 repo 的簡單描述，
     也可以不寫而留待將來修改。再下面的 "Public" 和 "Private" 是二選一的，默認
@@ -426,7 +426,7 @@ GitLab 推送。
     它們下面一行中的綠色按鈕 "Create repository"，一般說來就會成功地創建出空白
     的 repo `my_remote`。
 
-    ![在 GitHub 上創建新倉庫](members/HOWTOs/create-repo-github-1.png)
+    ![在 GitHub 上創建新倉庫](create-repo-github-1.png)
 
     **如果是往 GitLab 上推送，這一步不需要做。**
 
@@ -494,6 +494,6 @@ GitLab 推送。
 
 ## 參考文獻
 
-[1] [《如何建立和配置安全的工作環境 (I)》](members/HOWTOs/vm-sys.md)。
+[1] [《如何建立和配置安全的工作環境 (I)》](vm-sys.md)。
 
-[2] [《如何建立和配置安全的工作環境 (II)》](members/HOWTOs/single-vm.md)。
+[2] [《如何建立和配置安全的工作環境 (II)》](single-vm.md)。
