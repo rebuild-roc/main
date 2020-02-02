@@ -416,18 +416,19 @@ GitLab 推送。
     遠端 repo 存在時，其網址將是 <https://github.com/username/my_remote>），並在
     本地的 `my_src` 中用代號 `github` 指代這個遠端 repo。設置指令為
     ```
-    $ git remote add github https://github.com/username/my_remote.git
+    $ git remote add --tags github https://github.com/username/my_remote.git
     ```
     **從此之後，在本地 repo `my_src` 中就可以用 github 來指代這個遠端 repo
     了。**
     當然，您可以不用 github 這個代號，而改為別的，例如 foo 等等，這只要把上述
-    命令改為 `git remote add foo https://github.com/username/my_remote.git`
+    命令改為
+    `git remote add --tags foo https://github.com/username/my_remote.git`
     即可。
 
     如果您在 GitLab 上也有一個賬號 `username`，也要把該賬號下的 `my_remote`
     設置為 `my_src` 的遠端 repo，並且用 gitlab 來指代後者，則設置指令為
     ```
-    $ git remote add gitlab https://gitlab.com/username/my_remote.git
+    $ git remote add --tags gitlab https://gitlab.com/username/my_remote.git
     ```
 3. 假設 `my_src` 這個 repo 中除了默認分支 `master` 外，還有分支 `draft`，
     `branch1`，`branch2` 等等。現在 GitHub 上的遠端 repo `my_remote` 還不存在，
@@ -509,6 +510,39 @@ GitLab 推送。
 
 
 ### 4.2 向遠端 repo 推送和從遠端 repo 下拉
+
+假設非空的本地 repo `my_src` 已經設置了遠端 repo，具體例子參看 4.1 中的
+`git remote` 命令的使用。我們仍然以 4.1 中的情景為例，假設 `my_src` 有兩個遠端
+repos，代號分別是 `github` 和 `gitlab`，則命令
+```
+$ torsocks -i git push github master draft branch1
+$ torsocks -i git push gitlab master draft branch1
+```
+會把本地地分支 `master`、`draft` 和 `branch1` 上推到 GitHub 以及 GitLab
+上的兩個遠端 repos 中。類似地，命令
+```
+$ torsocks -i git fetch  github master draft branch1
+```
+會把代號為 `github` 的遠端 repo 中的分支 `master`、`draft` 和 `branch1` 下載到
+本地 repo 中。這些遠程分支被下載到本地之後，就被分別命名為 `github/master`，
+`github/draft` 和 `github/branch1`。
+
+**注意：**
+為了不讓中共當局追查到您的 IP 地址，在上述的推送和下拉過程中我們都通過命令
+`torsocks` 進行。如果把上面給的指令中的 `torsocks -i` 去掉，一旦和 GitHub 或
+GitLab 連接成功，中共當局找上門來的風險就會存在。請您仔細閱讀 4.1 中的相關說明。
+所以，對於上推和下拉操作需要慎之又慎，一次錯誤都不能犯。然而人總是會犯錯的，
+為減少犯錯的概率，我們把上推和下拉的指令放置在本 repo 的腳本
+[`Makefile`](../../Makefile) 中，這樣，當我們需要上推時，只要把工作目錄切換到
+本地 repo 的根目錄 `my_src` 下，然後執行
+```
+$ make push
+```
+即可；當我們需要下拉時，只要在切換完目錄後執行
+```
+$ make fetch
+```
+即可。
 
 
 
