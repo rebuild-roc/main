@@ -548,11 +548,62 @@ $ make fetch
 
 ## 五、克隆一個 repo 到本地
 
+在第四節中我們都是假定有一個不空的本地 repo，如何讓它和您在 GitHub 和/或 GitLab
+上的遠端 repo 進行數據同步。在這一節，我們考慮兩種情形：
+* 您有一個不空的本地 repo ——因為 Linux 系統是多用戶系統，這個 repo 可能不屬於
+    您，也可以屬於您。無論哪種情形，都要假設您有足夠的權限進入該 repo 的目錄及其
+    所有的子目錄，並且能夠讀取其中的內容。現在您打算把這個 repo 克隆為您自己的
+    repo。
+* 您打算把 GitHub 上某個不空的 repo （它不一定屬於您）克隆到本地，在克隆之前
+    本地並不存在一個對應的 repo。
+
 ### 5.1 把一個本地 repo 克隆為另一個本地 repo
+
+這裡是地一種情形：假設您有一個不空的本地 repo，它的路徑名是
+`src_repo`，它可能屬於您也可能不屬於您，不管怎樣，我們都要假設您有足夠的權限進入
+目錄 `src_repo` 及其所有的子目錄，並且有權讀取其中各個文件的內容。現在您打算把
+這個 repo 克隆為您自己的 repo，克隆後的路徑為 `dest_repo`。這個指令很簡單：
+```
+$ git clone src_repo dest_repo
+```
+成功後您會看到克隆出來的 repo `dest_repo`，它以 `src_repo` 為遠端 repo，代號為
+`origin`。
 
 ### 5.2 把 GitHub 或 GitLab 上的一個 repo 克隆為本地 repo
 
-### 5.3 在 GitHub 上把一個 repo 克隆為自己的 repo
+我們這裡所假設的情形是：您打算把 GitHub 上某個不空的 repo （它不一定屬於您）
+`https://github.com/test/HelloWorld` 克隆到本地，在克隆之前，本地並不存在一個
+對應的 repo。其步驟如下。
+
+1. 用瀏覽器打開上述網址（如果上述網址中的內容是中共不喜歡的，就應該在
+[Tor 瀏覽器](https://www.torproject.org)中打開），點擊網頁中綠色的 "Clone or
+download" 按鈕，如圖所示。
+
+    !["Clone or download" 按鈕](clone-butt.png)
+
+2. 在彈出的小對話框中有該 repo 的真實網址，即下圖中的
+`https://github.com/test/HellowWorld.git`。點擊它右邊的“複製”圖標就可以把這個
+網址複製到剪貼板 (clipboard) 中。也可以把上述網址用通常的選擇-複製方法來達到
+同樣的目的。
+
+    ![把網址複製到剪貼板中](copy-repo-URL.png)
+
+3. 在命令行中，把上述網址粘貼到指令 `git clone` 的後面。以上圖中的地址為例，這樣
+    做的最終結果是得到如下指令：
+    ```
+    $ git clone https://github.com/test/HelloWorld
+    ```
+
+上述指令成功後，就可以得到一個名為 `HellowWorld` 的本地 repo，其遠端 repo
+就是 GitHub 上的 `test/HelloWorld.git`。
+
+現在，克隆所得的本地 repo 中已經自動配置好了遠端 repo，以後就可以從它的遠端 repo
+下載數據；如果您知道遠端 repo 的屬主 `test` 的密碼（一般說來，這不可能），您還
+可以把本地 repo 的數據推送到上述遠端 repo 中，方法和第四節中的方法相同。
+
+對於 GitLab 上的 repo，其克隆方法完全類似。
+
+## 六、在 GitHub 上把一個 repo 克隆為自己的 repo
 
 ## 參考文獻
 
