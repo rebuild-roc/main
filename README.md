@@ -110,6 +110,7 @@
     * [參與者的 openPGP 公鑰列表](members/public-keys/README.md)
     * [如何建立和配置安全的工作環境 (I)](members/HOWTOs/vm-sys.md)
     * [如何建立和配置安全的工作環境 (II)](members/HOWTOs/single-vm.md)
+    * [如何創建和配置自己的本地及遠端 Repo](members/HOWTOs/repo-config.md)
 4. 腳本（詳細說明載於該目錄下的文件 [README.md](members/scripts/README.md)）
     * [Makefile](members/scripts/Makefile)
     * [完全開放防火牆的腳本](member/scripts/open-firewall)

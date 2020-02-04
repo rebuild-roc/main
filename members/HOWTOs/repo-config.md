@@ -128,8 +128,8 @@ email 賬號的原因。另外，如果有一天平亂行動在 GitHub 和 GitLa
 * 它必須和 GitHub 和/或 GitLab 上的一個 repo 對應，並與之相互交換數據。我們把
   GitHub 和/或 GitLab 上的這個對應 repo 叫做本地 repo 的**遠端 repo** (remote
   repo)；
-* 本地 repo 一旦被中共當局獲得，就會成為中共當局指控參與者的「罪證」，所以，本地
-  repo 必須在工作平臺中維護，而且要存儲在加密盤中。[1][2]
+* 本地 repo 一旦被中共當局獲得，有可能會被中共濫用為指控參與者的「罪證」，所以，
+  本地 repo 必須在工作平臺中維護，而且要存儲在加密盤中。[1][2]
 
 GitHub 和 GitLab 這類網站的主要引擎就是版本控制軟件 git，但是還有其他一些引擎。
 這兩個網站的使用難度比較大（至少需要具備使用 git 的基礎），託管在它們那裡的
@@ -312,6 +312,31 @@ user.signingkey=0x08807CA8
 ```
 其中最後三行就是我們上面設置的結果。
 
+**在此特別提醒：以上關於用戶名、email 和署名密鑰的設置，必須是局域設置，也就是
+說，只對一個特定的 repo 起作用——再直白點，這些信息存儲在被設置 repo 的文件
+`.git/config` 中，而不是 Linux 用戶的整體設置——直白地說，上述信息不能存儲在
+Linux 用戶主目錄下的配置文件 `.gitconfig` 中。否則，一旦中共當局接觸到您的
+工作平臺，配置文件 `~/.gitconfig` 中的用戶名、email 和署名密鑰就會暴露您是
+平亂行動參與者的事實。**
+那麼，應當怎樣檢驗 `git` 用戶名、email 和署名密鑰不在整體設置中呢？有兩種方法：
+一種是用文本編輯器直接打開文件 `~/.gitconfig` 看其中有沒有這三項致命信息；另一種
+方法是查看指令
+```
+$ git config --global --list
+```
+的返回結果，看其中有沒有致命信息。一旦發現存在致命信息，刪除的辦法是用指令
+```
+$ git config --global --unset user.name
+$ git config --global --unset user.email
+$ git config --global --unset user.signingKey
+```
+分別刪除 `git` 用戶名、email 和署名密鑰。
+
+實際上，用文本編輯器打開文件
+`~/.gitconfig` 並把相應的敏感信息整行整行地刪除也能達到同樣效果，但是，**因為
+很多文本編輯器會把修改前的文件內容保存到一個備份文件中，我們不建議直接編輯配置
+文件 `~/.gitconfig`，除非您對文本編輯器的行為非常熟悉。**
+
 
 #### 3.1.5 為 git 設置別名
 
@@ -391,18 +416,19 @@ GitLab 推送。
     遠端 repo 存在時，其網址將是 <https://github.com/username/my_remote>），並在
     本地的 `my_src` 中用代號 `github` 指代這個遠端 repo。設置指令為
     ```
-    $ git remote add github https://github.com/username/my_remote.git
+    $ git remote add --tags github https://github.com/username/my_remote.git
     ```
     **從此之後，在本地 repo `my_src` 中就可以用 github 來指代這個遠端 repo
     了。**
     當然，您可以不用 github 這個代號，而改為別的，例如 foo 等等，這只要把上述
-    命令改為 `git remote add foo https://github.com/username/my_remote.git`
+    命令改為
+    `git remote add --tags foo https://github.com/username/my_remote.git`
     即可。
 
     如果您在 GitLab 上也有一個賬號 `username`，也要把該賬號下的 `my_remote`
     設置為 `my_src` 的遠端 repo，並且用 gitlab 來指代後者，則設置指令為
     ```
-    $ git remote add gitlab https://gitlab.com/username/my_remote.git
+    $ git remote add --tags gitlab https://gitlab.com/username/my_remote.git
     ```
 3. 假設 `my_src` 這個 repo 中除了默認分支 `master` 外，還有分支 `draft`，
     `branch1`，`branch2` 等等。現在 GitHub 上的遠端 repo `my_remote` 還不存在，
@@ -476,21 +502,107 @@ GitLab 推送。
     ```
     可以推送到 GitLab 上創建一個名為 `my_remote` 的遠端 repo，其中含有分支
     `master`、`draft` 和 `branch1`。
+    **不過，這樣創建在 GitLab 上的遠端 repo 是一個私密的 (private) repo，只有
+    您自己在登錄 GitLab 的情況下才能看到其中內容。要想讓任何人都能看到（不管是否
+    登錄 GitLab），還需要您登錄到 GitLab 上把它改為公開的 repo。**
 
 **上述操作都是一次性的。**
 
 
 ### 4.2 向遠端 repo 推送和從遠端 repo 下拉
 
+假設非空的本地 repo `my_src` 已經設置了遠端 repo，具體例子參看 4.1 中的
+`git remote` 命令的使用。我們仍然以 4.1 中的情景為例，假設 `my_src` 有兩個遠端
+repos，代號分別是 `github` 和 `gitlab`，則命令
+```
+$ torsocks -i git push github master draft branch1
+$ torsocks -i git push gitlab master draft branch1
+```
+會把本地地分支 `master`、`draft` 和 `branch1` 上推到 GitHub 以及 GitLab
+上的兩個遠端 repos 中。類似地，命令
+```
+$ torsocks -i git fetch  github master draft branch1
+```
+會把代號為 `github` 的遠端 repo 中的分支 `master`、`draft` 和 `branch1` 下載到
+本地 repo 中。這些遠程分支被下載到本地之後，就被分別命名為 `github/master`，
+`github/draft` 和 `github/branch1`。
+
+**注意：**
+為了不讓中共當局追查到您的 IP 地址，在上述的推送和下拉過程中我們都通過命令
+`torsocks` 進行。如果把上面給的指令中的 `torsocks -i` 去掉，一旦和 GitHub 或
+GitLab 連接成功，中共當局找上門來的風險就會存在。請您仔細閱讀 4.1 中的相關說明。
+所以，對於上推和下拉操作需要慎之又慎，一次錯誤都不能犯。然而人總是會犯錯的，
+為減少犯錯的概率，我們把上推和下拉的指令放置在本 repo 的腳本
+[`Makefile`](../../Makefile) 中，這樣，當我們需要上推時，只要把工作目錄切換到
+本地 repo 的根目錄 `my_src` 下，然後執行
+```
+$ make push
+```
+即可；當我們需要下拉時，只要在切換完目錄後執行
+```
+$ make fetch
+```
+即可。
+
 
 
 ## 五、克隆一個 repo 到本地
 
+在第四節中我們都是假定有一個不空的本地 repo，如何讓它和您在 GitHub 和/或 GitLab
+上的遠端 repo 進行數據同步。在這一節，我們考慮兩種情形：
+* 您有一個不空的本地 repo ——因為 Linux 系統是多用戶系統，這個 repo 可能不屬於
+    您，也可以屬於您。無論哪種情形，都要假設您有足夠的權限進入該 repo 的目錄及其
+    所有的子目錄，並且能夠讀取其中的內容。現在您打算把這個 repo 克隆為您自己的
+    repo。
+* 您打算把 GitHub 上某個不空的 repo （它不一定屬於您）克隆到本地，在克隆之前
+    本地並不存在一個對應的 repo。
+
 ### 5.1 把一個本地 repo 克隆為另一個本地 repo
+
+這裡是地一種情形：假設您有一個不空的本地 repo，它的路徑名是
+`src_repo`，它可能屬於您也可能不屬於您，不管怎樣，我們都要假設您有足夠的權限進入
+目錄 `src_repo` 及其所有的子目錄，並且有權讀取其中各個文件的內容。現在您打算把
+這個 repo 克隆為您自己的 repo，克隆後的路徑為 `dest_repo`。這個指令很簡單：
+```
+$ git clone src_repo dest_repo
+```
+成功後您會看到克隆出來的 repo `dest_repo`，它以 `src_repo` 為遠端 repo，代號為
+`origin`。
 
 ### 5.2 把 GitHub 或 GitLab 上的一個 repo 克隆為本地 repo
 
-### 5.3 在 GitHub 上把一個 repo 克隆為自己的 repo
+我們這裡所假設的情形是：您打算把 GitHub 上某個不空的 repo （它不一定屬於您）
+`https://github.com/test/HelloWorld` 克隆到本地，在克隆之前，本地並不存在一個
+對應的 repo。其步驟如下。
+
+1. 用瀏覽器打開上述網址（如果上述網址中的內容是中共不喜歡的，就應該在
+[Tor 瀏覽器](https://www.torproject.org)中打開），點擊網頁中綠色的 "Clone or
+download" 按鈕，如圖所示。
+
+    !["Clone or download" 按鈕](clone-butt.png)
+
+2. 在彈出的小對話框中有該 repo 的真實網址，即下圖中的
+`https://github.com/test/HellowWorld.git`。點擊它右邊的“複製”圖標就可以把這個
+網址複製到剪貼板 (clipboard) 中。也可以把上述網址用通常的選擇-複製方法來達到
+同樣的目的。
+
+    ![把網址複製到剪貼板中](copy-repo-URL.png)
+
+3. 在命令行中，把上述網址粘貼到指令 `git clone` 的後面。以上圖中的地址為例，這樣
+    做的最終結果是得到如下指令：
+    ```
+    $ git clone https://github.com/test/HelloWorld
+    ```
+
+上述指令成功後，就可以得到一個名為 `HellowWorld` 的本地 repo，其遠端 repo
+就是 GitHub 上的 `test/HelloWorld.git`。
+
+現在，克隆所得的本地 repo 中已經自動配置好了遠端 repo，以後就可以從它的遠端 repo
+下載數據；如果您知道遠端 repo 的屬主 `test` 的密碼（一般說來，這不可能），您還
+可以把本地 repo 的數據推送到上述遠端 repo 中，方法和第四節中的方法相同。
+
+對於 GitLab 上的 repo，其克隆方法完全類似。
+
 
 ## 參考文獻
 
