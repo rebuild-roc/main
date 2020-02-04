@@ -603,7 +603,6 @@ download" 按鈕，如圖所示。
 
 對於 GitLab 上的 repo，其克隆方法完全類似。
 
-## 六、在 GitHub 上把一個 repo 克隆為自己的 repo
 
 ## 參考文獻
 
