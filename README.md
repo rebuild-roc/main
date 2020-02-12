@@ -99,6 +99,8 @@
 	  簽署一份啟用說明。
     * [中共政治是毒蠱政治](principles/analysis-CCP.md)
 3. 與參與者密切相關的文章
+    * [參與者須知](./members/HOWTOs/README.md)。這很重要！
+    * [常見問題](members/HOWTOs/faq.md)
     * [參與者的 openPGP 公鑰列表](members/public-keys/README.md)
     * [如何建立和配置安全的工作環境 (I)](members/HOWTOs/vm-sys.md)
     * [如何建立和配置安全的工作環境 (II)](members/HOWTOs/single-vm.md)
