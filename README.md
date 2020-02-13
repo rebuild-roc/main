@@ -97,6 +97,7 @@
 	  收錄於此。文章中所列網址、email 地址以及 openPGP 密鑰等目前一概停用，
 	  未來若啟用時，會用我現在的 openPGP 密鑰和該文中的 openPGP 密鑰共同
 	  簽署一份啟用說明。
+        * [常見問題](members/HOWTOs/faq.md)
     * [中共政治是毒蠱政治](principles/analysis-CCP.md)
 3. 與參與者密切相關的文章
     * [參與者須知](./members/HOWTOs/README.md)。這很重要！
