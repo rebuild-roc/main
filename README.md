@@ -118,9 +118,13 @@
 * 本 Repo 的正式網址： <https://github.com/rebuild-roc/main>；
 * 備用網址：
   * GitLab 網站上的 <https://gitlab.com/rebuild-roc/main>；
-  * 參與者安裝並運行 [ZeroNet](https://github.com/HelloZeroNet/ZeroNet) 之後，
-    在自己的瀏覽器中打開網址
-    <http://127.0.0.1:43110/xxxx>。
+  * 如果 GitHub 和 GitLab 都關閉我們的項目，則啟用
+      [Resilio Sync](https://www.resilio.com)
+      （原 **BitTorrent Sync**）將我們本來託管於 GitHub 上的各個項目散布於
+      BitTorrent 網絡上，大家可以使用在軟件 Resilio Sync
+      以只讀密鑰 `B3MN3OQ4XOVLGOOORSRTRTOEEOAFBRAAD` 下載本 repo，然後以 email
+      把自己的工作推送回來。其他各個 repo 的只讀密鑰見[《Resilio Sync
+      只讀密鑰列表》](resilio-RD-keys.md)。
 
 本行動的原始網址有兩處：一為 <http://cyber-china.blogspot.com>，一為
 <https://github.com/infcn/blog>，
