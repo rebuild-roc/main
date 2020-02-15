@@ -1,9 +1,9 @@
-# Resilio Sync 只讀密鑰列表
+# Resilio Sync 只讀同步密鑰列表
 
-只讀密鑰 | repo 名稱 | 簡單說明
+只讀同步密鑰 | repo 名稱 | 簡單說明
 ---------|-----------|---------
-B3MN3OQ4XOVLGOOORSRTRTOEEOAFBRAAD | [main](https://github.com/rebuild-roc/main) | 總體規劃與項目協調
-BKGGWQNWXTLDDC4N4FNCO56HAOI2U2X6N | [missions](https://github.com/rebuild-roc/missions) | 江湖追殺令
+BTWS2CFAD5C4NKMZBN7GONYSDSPGZLVU4 | [main](https://github.com/rebuild-roc/main) | 總體規劃與項目協調
+BRESQFWPYZXHVWE2N6RLFC2VM7W55KYMJ | [missions](https://github.com/rebuild-roc/missions) | 江湖追殺令
 
 ## 注：
 
@@ -30,4 +30,6 @@ BKGGWQNWXTLDDC4N4FNCO56HAOI2U2X6N | [missions](https://github.com/rebuild-roc/mi
     Resilio Sync 的設置中，將代理 (proxy) 的設置空置即可。可以選擇
     "Use UPnP port mapping"（使用 UPnP 端口映射）。其他設置不是特別重要，根據
     自己的考慮設置即可。
-4. 設置好以後，就可以添加只讀密鑰下載對應的 repo 了。
+4. 設置好以後，就可以添加只讀同步密鑰下載對應的 repo 了。因為同步密鑰只能用於
+    下載而不能上傳，所以，**請不要在下載後的目錄內作改動**，否則改動內容會被
+    隨時覆蓋。

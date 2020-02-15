@@ -122,9 +122,9 @@
       [Resilio Sync](https://www.resilio.com)
       （原 **BitTorrent Sync**）將我們本來託管於 GitHub 上的各個項目散布於
       BitTorrent 網絡上，大家可以使用在軟件 Resilio Sync
-      以只讀密鑰 `B3MN3OQ4XOVLGOOORSRTRTOEEOAFBRAAD` 下載本 repo，然後以 email
-      把自己的工作推送回來。其他各個 repo 的只讀密鑰見[《Resilio Sync
-      只讀密鑰列表》](resilio-RD-keys.md)。
+      以只讀的同步密鑰 `BTWS2CFAD5C4NKMZBN7GONYSDSPGZLVU4` 下載本 repo，然後以
+      email 把自己的工作推送回來。其他各個 repo 的同步密鑰見[《Resilio Sync
+      只讀同步密鑰列表》](members/HOWTOs/resilio-RD-keys.md)。
 
 本行動的原始網址有兩處：一為 <http://cyber-china.blogspot.com>，一為
 <https://github.com/infcn/blog>，
