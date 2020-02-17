@@ -99,6 +99,7 @@
 	  簽署一份啟用說明。
         * [常見問題](members/HOWTOs/faq.md)
     * [中共政治是毒蠱政治](principles/analysis-CCP.md)
+    * [光復後的中華民國之軍隊架構](principles/military.md)
 3. 與參與者密切相關的文章
     * [參與者須知](./members/HOWTOs/README.md)。這很重要！
     * [常見問題](members/HOWTOs/faq.md)
