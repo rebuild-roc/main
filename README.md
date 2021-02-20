@@ -151,6 +151,7 @@
     * [中共政治是毒蠱政治](principles/analysis-CCP.md)
     * [交易結算與信用管理系統](principles/credit.md)
     * [光復後的中華民國之軍隊架構](principles/military.md)
+    * [為什麼必須廢除簡體字？](principles/no-simpl.md)
 3. 與參與者密切相關的文章
     * [參與者須知](./members/HOWTOs/README.md)。這很重要！
     * [常見問題](members/HOWTOs/faq.md)
