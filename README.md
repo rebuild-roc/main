@@ -58,9 +58,9 @@
 數位技術相互合作與交流，建立一套不受中共控制和破壞的數位貨幣、交易結算和信用管理
 系統，以這些手段同中共展開貨幣戰爭與公信力競爭，逐步枯竭中共的財政來源，最終
 讓中共龐大的官僚系統和維穩系統拖垮它，以最小的社會動盪實現社會轉型，最終
-將中華民國光復於中國大陸，建立一個美國式的民有、民治、民享的聯邦制國家，並且要
-以現代化的信息系統規範業已為中共所敗壞的民風，使民痞、強權、悍匪、軍閥難以壯大，
-使中華大地永遠不復陷於專制政體。**
+將中華民國光復於中國大陸，建立一個民有、民治、民享的聯邦制國家，並且要參照美國
+立國以來的經驗和教訓，以現代化的信息系統規範業已為中共所敗壞的民風，
+使民痞、強權、悍匪、軍閥難以壯大，使中華大地永遠不復陷於專制政體。**
 
 我把上述的整個行動暫定名為「平亂行動」。
 在[《平亂行動概略》](principles/outline.md)一文中，我對整個計劃作了一個系統性的
@@ -152,7 +152,9 @@
     * [交易結算與信用管理系統](principles/credit.md)
     * [光復後的中華民國之軍隊架構](principles/military.md)
     * [為什麼必須廢除簡體字？](principles/no-simpl.md)
-3. 與參與者密切相關的文章
+3. 文告
+    * [致共軍官兵的公開信](decl/to-PLA.md)
+4. 與參與者密切相關的文章
     * [參與者須知](./members/HOWTOs/README.md)。這很重要！
     * [常見問題](members/HOWTOs/faq.md)
     * [參與者的 openPGP 公鑰列表](members/public-keys/README.md)
@@ -160,7 +162,7 @@
     * [如何建立和配置安全的工作環境 (II)](members/HOWTOs/single-vm.md)
     * [如何創建和配置自己的本地及遠端 Repo](members/HOWTOs/repo-config.md)
     * [項目分叉 (Forking) 與合作](members/HOWTOs/forking.md)
-4. 腳本（詳細說明載於該目錄下的文件 [README.md](members/scripts/README.md)）
+5. 腳本（詳細說明載於該目錄下的文件 [README.md](members/scripts/README.md)）
     * [Makefile](members/scripts/Makefile)
     * [完全開放防火牆的腳本](member/scripts/open-firewall)
     * [單虛擬機方案中的防火牆設置腳本](member/scripts/single-vm-firewall)
@@ -171,6 +173,8 @@
 * 本 Repo 的正式網址： <https://github.com/rebuild-roc/main>；
 * 備用網址：
   * GitLab 網站上的 <https://gitlab.com/rebuild-roc/main>；
+  * 使用 [Tor 瀏覽器](https://www.torproject.org)連線
+    <http://githidep2hynhdmutuv7n2tei4iie2c7lyqz5fes3r5zzoxe5dshtxyd.onion/rebuild-roc/main>；
   * 如果 GitHub 和 GitLab 都關閉我們的項目，則啟用
       [Resilio Sync](https://www.resilio.com)
       （原 **BitTorrent Sync**）將我們本來託管於 GitHub 上的各個項目散布於

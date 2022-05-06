@@ -13,28 +13,34 @@
 #  追查到。為了避免這種後果，應當把這些程式化工作交給 Makefile 來
 #  做。
 #
+#  以下所提及的 GitHub，其基礎網址為 <https://github.com>，而 GitLab
+#  的基礎網址為 <https://gitlab.com>。暗網 GitHide 的基礎網址為
+#  <http://githidep2hynhdmutuv7n2tei4iie2c7lyqz5fes3r5zzoxe5dshtxyd.onion>
+#  而且只能通過 Tor 網絡才能連結上去。
+#
 #  使用方法：
-#    (1) 將本地倉庫的 BRANCHES_TO_SYNC 中所列分支上推到 GitHub 和 GitLab
-#      的遠端倉庫，則在命令行中執行
+#    (1) 將本地倉庫的 BRANCHES_TO_SYNC 中所列分支上推到 GitHub, GitLab 以及
+#      各個暗網代碼託管網站 (例如 GitHide, idk) 的遠端倉庫，則在命令行中執行
 #		make push
 #      如果需要強行推送，即，對 git push 增加選項 --force，則在命令行中執行
 #      		make push-forced
-#    (2) 從 GitHub 和 GitLab 的遠端倉庫下拉某些分支到本地倉庫，則
+#    (2) 從 GitHub, GitLab 等代碼託管網站的遠端倉庫下拉某些分支到本地倉庫，則
 #      在命令行中執行
 #		make pull
 #      或
 #		make fetch
-#    (3) 如果本地倉庫在 GitHub 或 GitLab 上並不存在，可以用
+#    (3) 如果本地倉庫在 GitHub, GitLab 以及 GitHide, idk 等代碼託管網站上並不存在，
+#      可以用
 #    		make create
-#      把本地倉庫上推到上述兩個網站，以後就可以用 make pull 和
-#      make push 把本地倉庫和 GitHub 和 GitLab 上的遠端倉庫同步更新
-#      了。不過，在執行 make create 前，需要先登錄到 GitHub 上建立
-#      一個空的倉庫；假設空倉庫的名稱為 <repo>，還需要完成下面配置
-#      步驟中的 (1) 才可以執行上述的 make create 。
+#      把本地倉庫上推到上述網站，以後就可以用 make pull 和 make push 把本地倉庫
+#      和上述代碼託管網站上的遠端倉庫同步更新了。不過，在執行 make create 前，
+#      需要先登錄到 GitHub 上建立一個空的倉庫 (而 GitLab 以及基於 GitLab 代碼的
+#      託管網站則不需要預先創建空倉庫)；假設空倉庫的名稱為 <repo>，還需要完成
+#      下面配置步驟中的 (1) 才可以執行上述的 make create 。
 #
-#      在進行上述操作前，要先在您的本地倉庫中的配置好遠端倉庫及對
-#  應的上游分支。下面的例子是配置 GitHub 遠端倉庫以及其中的上游分
-#  支的方法，對於 GitLab 和其他的遠端倉庫完全類似。
+#      在進行上述操作前，要先在您的本地倉庫中的配置好遠端倉庫及對應的上游分支。
+#  下面的例子是配置 GitHub 遠端倉庫以及其中的上游分支的方法，對於 GitLab 和
+#  其他的遠端倉庫完全類似。
 #    (1) 將 GitHub 中的倉庫命名為遠端倉庫 github:
 #    		git remote add github https://github.com/<user>/<repo>.git
 #      其中 <user> 是您在 GitHub 上的用戶名，<repo> 是您以 <user>
@@ -67,10 +73,13 @@
 .PHONY: help clean create push push-forced pull fetch
 
 TORSOCKS = torsocks
+I2P_PROXY_IP = 10.0.2.2
 GIT = git
 
 REMOTE_GITHUB = github
 REMOTE_GITLAB = gitlab
+REMOTE_GITHIDE = githide
+REMOTE_IDK_I2P = idk
 BRANCHES_TO_SYNC = master draft
 
 help:
@@ -82,11 +91,17 @@ clean:
 create:
 	$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
 	$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
+	$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITHIDE) $(BRANCHES_TO_SYNC)
+	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) push -u $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
 
 push pull fetch:
-	$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
-	$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
+	#$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
+	#$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
+	#$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHIDE) $(BRANCHES_TO_SYNC)
+	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) $@ $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
 
 push-forced:
 	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
 	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
+	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GIDHIDE) $(BRANCHES_TO_SYNC)
+	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) push --forced $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
