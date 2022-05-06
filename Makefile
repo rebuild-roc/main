@@ -20,7 +20,7 @@
 #
 #  使用方法：
 #    (1) 將本地倉庫的 BRANCHES_TO_SYNC 中所列分支上推到 GitHub, GitLab 以及
-#      各個暗網代碼託管網站 (例如 GitHide) 的遠端倉庫，則在命令行中執行
+#      各個暗網代碼託管網站 (例如 GitHide, idk) 的遠端倉庫，則在命令行中執行
 #		make push
 #      如果需要強行推送，即，對 git push 增加選項 --force，則在命令行中執行
 #      		make push-forced
@@ -29,7 +29,7 @@
 #		make pull
 #      或
 #		make fetch
-#    (3) 如果本地倉庫在 GitHub, GitLab 以及 GitHide 等代碼託管網站上並不存在，
+#    (3) 如果本地倉庫在 GitHub, GitLab 以及 GitHide, idk 等代碼託管網站上並不存在，
 #      可以用
 #    		make create
 #      把本地倉庫上推到上述網站，以後就可以用 make pull 和 make push 把本地倉庫
@@ -73,11 +73,13 @@
 .PHONY: help clean create push push-forced pull fetch
 
 TORSOCKS = torsocks
+I2P_PROXY_IP = 10.0.2.2
 GIT = git
 
 REMOTE_GITHUB = github
 REMOTE_GITLAB = gitlab
 REMOTE_GITHIDE = githide
+REMOTE_IDK_I2P = idk
 BRANCHES_TO_SYNC = master draft
 
 help:
@@ -90,13 +92,16 @@ create:
 	$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
 	$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
 	$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITHIDE) $(BRANCHES_TO_SYNC)
+	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) push -u $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
 
 push pull fetch:
-	$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
-	$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
-	$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHIDE) $(BRANCHES_TO_SYNC)
+	#$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
+	#$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
+	#$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHIDE) $(BRANCHES_TO_SYNC)
+	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) $@ $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
 
 push-forced:
 	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
 	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
 	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GIDHIDE) $(BRANCHES_TO_SYNC)
+	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) push --forced $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
