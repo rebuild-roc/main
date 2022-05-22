@@ -90,18 +90,18 @@ clean:
 
 create:
 	$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
-	$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
-	$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITHIDE) $(BRANCHES_TO_SYNC)
+	#$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
+	#$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITHIDE) $(BRANCHES_TO_SYNC)
 	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) push -u $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
 
 push pull fetch:
-	#$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
+	$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
 	#$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
 	#$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHIDE) $(BRANCHES_TO_SYNC)
 	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) $@ $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
 
 push-forced:
 	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
-	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
-	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GIDHIDE) $(BRANCHES_TO_SYNC)
+	#$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GITLAB) $(BRANCHES_TO_SYNC)
+	#$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GIDHIDE) $(BRANCHES_TO_SYNC)
 	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) push --forced $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
