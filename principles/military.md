@@ -1,6 +1,6 @@
 # 光復後的中華民國之軍隊架構
 
-[戡亂復國](mailto:rebuild-roc@protonmail.com)
+[戡亂復國](mailto:rebld-roc@protonmail.com)
 
 ## 一、中共軍隊的特點及其缺陷
 
