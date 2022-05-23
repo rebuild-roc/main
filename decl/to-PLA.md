@@ -1,6 +1,6 @@
 # [致共軍官兵的公開信](https://github.com/rebuild-roc/main/decl/to-PLA.md)
 
-[**戡亂復國**](mailto:rebuild-roc@ctemplar.com)
+[戡亂復國](mailto:rebld-roc@protonmail.com)
 
 共軍上下大小官兵鑑：
 
@@ -39,7 +39,9 @@
 
 國際政治與軍事形勢
 
-習近平其人
+習近平其人: 最大的短板，推卸責任
+
+將校多飯桶
 
 軍人及其家屬的醫療免費
 
