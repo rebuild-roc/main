@@ -1,4 +1,4 @@
-# 光復後的中華民國之軍隊架構
+# [光復後的中華民國之軍隊架構](https://github.com/rebuild-roc/main/blob/master/principles/military.md)
 
 [戡亂復國](mailto:rebld-roc@protonmail.com)
 
