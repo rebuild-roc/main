@@ -1,4 +1,4 @@
-# [致共軍官兵的公開信](https://github.com/rebuild-roc/main/decl/to-PLA.md)
+# [致共軍官兵的公開信](https://github.com/rebuild-roc/main/blob/master/decl/to-PLA.md)
 
 [戡亂復國](mailto:rebld-roc@protonmail.com)
 
