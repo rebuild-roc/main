@@ -174,7 +174,7 @@
 * 本 Repo 的正式網址： <https://github.com/rebuild-roc/main>；
 * 備用網址：
   * 使用 [Tor 瀏覽器](https://www.torproject.org)連線
-    <http://47ggr2fa3vnwfyhvgskzdmr3i32eijwymxohtxsls45dulmriwxszjad.onion/rebuild-roc/main>，
+    <https://47ggr2fa3vnwfyhvgskzdmr3i32eijwymxohtxsls45dulmriwxszjad.onion/rebuild-roc/main>，
     或者使用 [I2P](https://geti2p.net/) 連接到
     <http://git.idk.i2p/rebuild-roc/main>；
   * 如果 GitHub 關閉我們的項目，則啟用
