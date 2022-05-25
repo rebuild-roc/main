@@ -152,9 +152,10 @@
     * [交易結算與信用管理系統](principles/credit.md)
     * [光復後的中華民國之軍隊架構](principles/military.md)
     * [為什麼必須廢除簡體字？](principles/no-simpl.md)
-3. 文告
+3. 專題與時評
+4. 文告
     * [致共軍官兵的公開信](decl/to-PLA.md)
-4. 與參與者密切相關的文章
+5. 與參與者密切相關的文章
     * [參與者須知](./members/HOWTOs/README.md)。這很重要！
     * [常見問題](members/HOWTOs/faq.md)
     * [參與者的 openPGP 公鑰列表](members/public-keys/README.md)
@@ -162,7 +163,7 @@
     * [如何建立和配置安全的工作環境 (II)](members/HOWTOs/single-vm.md)
     * [如何創建和配置自己的本地及遠端 Repo](members/HOWTOs/repo-config.md)
     * [項目分叉 (Forking) 與合作](members/HOWTOs/forking.md)
-5. 腳本（詳細說明載於該目錄下的文件 [README.md](members/scripts/README.md)）
+6. 腳本（詳細說明載於該目錄下的文件 [README.md](members/scripts/README.md)）
     * [Makefile](members/scripts/Makefile)
     * [完全開放防火牆的腳本](member/scripts/open-firewall)
     * [單虛擬機方案中的防火牆設置腳本](member/scripts/single-vm-firewall)
