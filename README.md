@@ -173,8 +173,10 @@
 * 本 Repo 的正式網址： <https://github.com/rebuild-roc/main>；
 * 備用網址：
   * 使用 [Tor 瀏覽器](https://www.torproject.org)連線
-    <http://githidep2hynhdmutuv7n2tei4iie2c7lyqz5fes3r5zzoxe5dshtxyd.onion/rebuild-roc/main>；
-  * 如果 GitHub 和 GitLab 都關閉我們的項目，則啟用
+    <http://47ggr2fa3vnwfyhvgskzdmr3i32eijwymxohtxsls45dulmriwxszjad.onion/rebuild-roc/main>，
+    或者使用 [I2P](https://geti2p.net/) 連接到
+    <http://git.idk.i2p/rebuild-roc/main>；
+  * 如果 GitHub 關閉我們的項目，則啟用
       [Resilio Sync](https://www.resilio.com)
       （原 **BitTorrent Sync**）將我們本來託管於 GitHub 上的各個項目散布於
       BitTorrent 網絡上，大家可以使用在軟件 Resilio Sync
