@@ -153,6 +153,7 @@
     * [光復後的中華民國之軍隊架構](principles/military.md)
     * [為什麼必須廢除簡體字？](principles/no-simpl.md)
 3. 專題與時評
+    * [如何看待習近平禪位的傳聞](topics/abdication.md)
 4. 文告
     * [致共軍官兵的公開信](decl/to-PLA.md)
 5. 與參與者密切相關的文章
