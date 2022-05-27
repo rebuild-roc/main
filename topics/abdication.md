@@ -2,8 +2,8 @@
 
 [戡亂復國](mailto:rebld-roc@protonmail.com)
 
-　　2022 年 5 月 5 日，[推特](https://twitter.com)中文圈的知名用戶
-[老燈](https://www.youtube.com/c/老灯)在
+　　2022 年 5 月 5 日，[推特](https://twitter.com)中文圈的
+知名用戶[老燈](https://www.youtube.com/c/老灯)在
 [YouTube](https://www.youtube.com) 上說，
 中共國安口有人向他爆料稱，
 * 中共在黨內元老的運作下，5 月 3 日中共政治局常委會擴大會議迫使習近平「禪位」
