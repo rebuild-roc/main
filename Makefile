@@ -73,6 +73,7 @@
 .PHONY: help clean create push push-forced pull fetch
 
 TORSOCKS = torsocks
+TORSOCKS_OPT =
 I2P_PROXY_IP = 10.0.2.2
 GIT = git
 
@@ -87,13 +88,13 @@ clean:
 	rm -f $(shell find . -name "?*~")
 
 create:
-	$(TORSOCKS) -i $(GIT) push -u $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
+	$(TORSOCKS) $(TORSOCKS_OPT) $(GIT) push -u $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
 	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) push -u $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
 
 push pull fetch:
-	$(TORSOCKS) -i $(GIT) $@ $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
+	$(TORSOCKS) $(TORSOCKS_OPT) $(GIT) $@ $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
 	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) $@ $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
 
 push-forced:
-	$(TORSOCKS) -i $(GIT) push --force $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
+	$(TORSOCKS) $(TORSOCKS_OPT) $(GIT) push --force $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
 	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) push --forced $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
