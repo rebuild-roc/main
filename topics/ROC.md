@@ -1,4 +1,4 @@
-# 關於國號的考慮以及與臺灣的關係
+# [關於國號的考慮以及與臺灣的關係](https://github.com/rebuild-roc/main/blob/master/topics/ROC.md)
 
 [戡亂復國](mailto:rebld-roc@protonmail.com)
 
