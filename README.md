@@ -153,6 +153,7 @@
     * [光復後的中華民國之軍隊架構](principles/military.md)
     * [為什麼必須廢除簡體字？](principles/no-simpl.md)
     * [股份制公司的三本——資本、智本與人本](principles/three-components.md)
+    * [中庸與防極端化法](principles/ZhongYong.md)
 3. 專題與時評
     * [關於國號的考慮以及與臺灣的關係](topics/ROC.md)
     * [如何看待習近平禪位的傳聞](topics/abdication.md)
