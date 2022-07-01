@@ -133,13 +133,17 @@ $a$，最大值爲 $b$.
 （實際上這種依賴關係還會因爲品菜人的不同而不同），但這不影響我們掌握鹽的用量
 ——一個學習做菜的人只要試驗幾次就可以找到比較好的用鹽量（但不一定是最佳值）。
 
-### 1. 黃金分割法與斐波拿契
+由於具體尋找（或逼近）$m$ 的方法很多，這裏我們只介紹三分法和黃金分割法。
+
+### 1. 三分法
+
+(ternary search)
+
+### 2. 黃金分割法
+
+(golden-section search)
 
 divide-and-conquer algorithms (分治算法)
-* golden-section search
-* ternary search
-* Brent's method
-* binary search
 
 以上不可能涵蓋所有的算法。
 動力學過程
