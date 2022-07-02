@@ -1,6 +1,6 @@
 # [中庸與防極端化法](https://github.com/rebuild-roc/main/blob/master/principles/ZhongYong.md)
 
-<div align="center">[戡亂復國](mailto:rebld-roc@protonmail.com)</div>
+[<div align="center">戡亂復國</div>](mailto:rebld-roc@protonmail.com)
 
 
 ## 一、中共式的極端化及其防範
