@@ -143,7 +143,7 @@
 
           原 <https://cyber-china.blogspot.com/> 和
 	  <https://github.com/infcn/blog>
-          中的文章，[HTML 格式](outline-2015.html)（可下載後用瀏覽器閱讀），
+          中的文章，[HTML 格式](principles/outline-2015.html)（可下載後用瀏覽器閱讀），
 	  作於 2015 年，一字未改收錄於此。
 	  文章中所列網址、email 地址以及 openPGP 密鑰等目前一概停用，
 	  未來若啟用時，會用我現在的 openPGP 密鑰和該文中的 openPGP 密鑰共同
