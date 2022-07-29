@@ -239,6 +239,7 @@
    這個門檻比率應當在設計中國幣運行協議的時候就固定好，把它設爲 1/2 可能並不好，
    設爲 2/3 或者黃金比率
    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
      <mrow>
        <mi>&#x003C6;</mi>
        <mo>&#x0003D;</mo>
@@ -255,9 +256,11 @@
        <mo>&it;</mo>
        <mn>1.618</mn>
      </mrow>
+     </semantics>
    </math>
    的倒數
    <math mode="display" xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
      <mrow>
        <mi>&#x003A6;</mi>
        <mo>&#x0003D;</mo>
@@ -279,6 +282,7 @@
        <mo>&it;</mo>
        <mn>0.618</mn>
      </mrow>
+     </semantics>
    </math>
    可能會更好。
 3. 以比特幣爲代表的公開賬本方式不可採用，最關鍵的原因是太過於消耗資源：
