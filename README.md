@@ -159,8 +159,8 @@
     * [關於國號的考慮以及與臺灣的關係](topics/ROC.md)
     * [如何看待習近平禪位的傳聞](topics/abdication.md)
 4. 文告
-    * [上海部分企業家和投資人的公開信(轉載)](decl/Shanghai-20220530.md)
     * [信息時代的倒共建國線路圖](decl/route-ROC.md)
+    * [上海部分企業家和投資人的公開信(轉載)](decl/Shanghai-20220530.md)
     * [致共軍官兵的公開信](decl/to-PLA.md)
 5. 與參與者密切相關的文章
     * [參與者須知](./members/HOWTOs/README.md)。這很重要！
