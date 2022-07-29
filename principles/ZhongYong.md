@@ -525,174 +525,174 @@ $f(x)$
    <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
        <mrow><mi>m</mi></mrow>
    </math>
-  在區間
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mo stretchy="false">[</mo>
-	  <msub><mi>x</mi><mn>1</mn></msub>
-	  <mo>&#x0002C;</mo>
-	  <mi>r</mi>
-	  <mo stretchy="false">]</mo>
-      </mrow>
-  </math>
-  內，所以，我們把
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>l</mi></mrow>
-  </math>
-  的值改爲
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><msub><mi>x</mi><mn>1</mn></msub></mrow>
-  </math>；
-  如果
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mi>f</mi>
-	  <mo stretchy="false">&#x00028;</mo>
-	  <msub><mi>x</mi><mn>1</mn></msub>
-	  <mo stretchy="false">&#x00029;</mo>
-	  <mo>&#x0003E;</mo>
-	  <mi>f</mi>
-	  <mo stretchy="false">&#x00028;</mo>
-	  <msub><mi>x</mi><mn>2</mn></msub>
-	  <mo stretchy="false">&#x00029;</mo>
-      </mrow>
-  </math>,
-  這就意味着
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>f</mi></mrow>
-  </math>
-  的最大值點
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>m</mi></mrow>
-  </math>
-  在區間
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mo stretchy="false">[</mo>
-	  <mi>l</mi>
-	  <mo>&#x0002C;</mo>
-	  <msub><mi>x</mi><mn>2</mn></msub>
-	  <mo stretchy="false">]</mo>
-      </mrow>
-  </math>
-  內，
-  所以，此時我們把
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>r</mi></mrow>
-  </math>
-  的值改爲
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>
-  </math>；
-  如果
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mi>f</mi>
-	  <mo stretchy="false">&#x00028;</mo>
-	  <msub><mi>x</mi><mn>1</mn></msub>
-	  <mo stretchy="false">&#x00029;</mo>
-	  <mo>&#x0003D;</mo>
-	  <mi>f</mi>
-	  <mo stretchy="false">&#x00028;</mo>
-	  <msub><mi>x</mi><mn>2</mn></msub>
-	  <mo stretchy="false">&#x00029;</mo>
-      </mrow>
-  </math>,
-  這就意味着
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>f</mi></mrow>
-  </math>
-  的最大值點
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>m</mi></mrow>
-  </math>
-  在區間
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mo stretchy="false">[</mo>
-	  <msub><mi>x</mi><mn>1</mn></msub>
-	  <mo>&#x0002C;</mo>
-	  <msub><mi>x</mi><mn>2</mn></msub>
-	  <mo stretchy="false">]</mo>
-      </mrow>
-  </math>
-  內，
-  所以，此時我們把
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>l</mi></mrow>
-  </math>
-  和
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>r</mi></mrow>
-  </math>
-  的值分別改爲
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><msub><mi>x</mi><mn>1</mn></msub></mrow>
-  </math>
-  和
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>
-  </math>；
+   在區間
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mo stretchy="false">[</mo>
+	   <msub><mi>x</mi><mn>1</mn></msub>
+	   <mo>&#x0002C;</mo>
+	   <mi>r</mi>
+	   <mo stretchy="false">]</mo>
+       </mrow>
+   </math>
+   內，所以，我們把
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>l</mi></mrow>
+   </math>
+   的值改爲
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><msub><mi>x</mi><mn>1</mn></msub></mrow>
+   </math>；
+   如果
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mi>f</mi>
+	   <mo stretchy="false">&#x00028;</mo>
+	   <msub><mi>x</mi><mn>1</mn></msub>
+	   <mo stretchy="false">&#x00029;</mo>
+	   <mo>&#x0003E;</mo>
+	   <mi>f</mi>
+	   <mo stretchy="false">&#x00028;</mo>
+	   <msub><mi>x</mi><mn>2</mn></msub>
+	   <mo stretchy="false">&#x00029;</mo>
+       </mrow>
+   </math>,
+   這就意味着
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>f</mi></mrow>
+   </math>
+   的最大值點
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>m</mi></mrow>
+   </math>
+   在區間
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mo stretchy="false">[</mo>
+	   <mi>l</mi>
+	   <mo>&#x0002C;</mo>
+	   <msub><mi>x</mi><mn>2</mn></msub>
+	   <mo stretchy="false">]</mo>
+       </mrow>
+   </math>
+   內，
+   所以，此時我們把
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>r</mi></mrow>
+   </math>
+   的值改爲
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>
+   </math>；
+   如果
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mi>f</mi>
+	   <mo stretchy="false">&#x00028;</mo>
+	   <msub><mi>x</mi><mn>1</mn></msub>
+	   <mo stretchy="false">&#x00029;</mo>
+	   <mo>&#x0003D;</mo>
+	   <mi>f</mi>
+	   <mo stretchy="false">&#x00028;</mo>
+	   <msub><mi>x</mi><mn>2</mn></msub>
+	   <mo stretchy="false">&#x00029;</mo>
+       </mrow>
+   </math>,
+   這就意味着
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>f</mi></mrow>
+   </math>
+   的最大值點
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>m</mi></mrow>
+   </math>
+   在區間
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mo stretchy="false">[</mo>
+	   <msub><mi>x</mi><mn>1</mn></msub>
+	   <mo>&#x0002C;</mo>
+	   <msub><mi>x</mi><mn>2</mn></msub>
+	   <mo stretchy="false">]</mo>
+       </mrow>
+   </math>
+   內，
+   所以，此時我們把
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>l</mi></mrow>
+   </math>
+   和
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>r</mi></mrow>
+   </math>
+   的值分別改爲
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><msub><mi>x</mi><mn>1</mn></msub></mrow>
+   </math>
+   和
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>
+   </math>；
 4. 理論上，從這裏跳轉到上述的步驟 1, 那就可以利用更短的區間
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mo stretchy="false">[</mo>
-	  <mi>l</mi>
-	  <mo>&#x0002C;</mo>
-	  <mi>r</mi>
-	  <mo stretchy="false">]</mo>
-      </mrow>
-  </math>
-  進行下一輪循環了。將這個循環無限進行下去，理論上可以把
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>m</mi></mrow>
-  </math>
-  的值給確定下來。
-  但是在實際操作上，我們不可能陷於無限循環中，必須要在適當的時候跳出這個循環。
-  這就需要事先設定一個精度
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>&#x003B4;</mi></mrow>
-  </math>
-  （這是一個相當小的正數），
-  當一個循環進行到這一步時，我們就比較一下是否有
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mi>r</mi>
-	  <mo>&#x02212;</mo>
-	  <mi>l</mi>
-	  <mo>&#x0003C;</mo>
-	  <mi>&#x003B4;</mi>
-      </mrow>
-  </math>
-  成立，
-  如果成立，則把
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>m</mi></mrow>
-  </math>
-  的值近似設定爲
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mo stretchy="false">&#x00028;</mo>
-	  <mi>l</mi>
-	  <mo>&#x0002B;</mo>
-	  <mi>r</mi>
-	  <mo stretchy="false">&#x00029;</mo>
-	  <mo>&#x0002F;</mo>
-	  <mn>2</mn>
-      </mrow>
-  </math>,
-  然後退出循環結束整個過程；
-  如果
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mi>r</mi>
-	  <mo>&#x02212;</mo>
-	  <mi>l</mi>
-	  <mo>&#x0003C;</mo>
-	  <mi>&#x003B4;</mi>
-      </mrow>
-  </math>
-  不成立，那就回到步驟 1 進行下一輪循環。
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mo stretchy="false">[</mo>
+	   <mi>l</mi>
+	   <mo>&#x0002C;</mo>
+	   <mi>r</mi>
+	   <mo stretchy="false">]</mo>
+       </mrow>
+   </math>
+   進行下一輪循環了。將這個循環無限進行下去，理論上可以把
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>m</mi></mrow>
+   </math>
+   的值給確定下來。
+   但是在實際操作上，我們不可能陷於無限循環中，必須要在適當的時候跳出這個循環。
+   這就需要事先設定一個精度
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>&#x003B4;</mi></mrow>
+   </math>
+   （這是一個相當小的正數），
+   當一個循環進行到這一步時，我們就比較一下是否有
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mi>r</mi>
+	   <mo>&#x02212;</mo>
+	   <mi>l</mi>
+	   <mo>&#x0003C;</mo>
+	   <mi>&#x003B4;</mi>
+       </mrow>
+   </math>
+   成立，
+   如果成立，則把
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>m</mi></mrow>
+   </math>
+   的值近似設定爲
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mo stretchy="false">&#x00028;</mo>
+	   <mi>l</mi>
+	   <mo>&#x0002B;</mo>
+	   <mi>r</mi>
+	   <mo stretchy="false">&#x00029;</mo>
+	   <mo>&#x0002F;</mo>
+	   <mn>2</mn>
+       </mrow>
+   </math>,
+   然後退出循環結束整個過程；
+   如果
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mi>r</mi>
+	   <mo>&#x02212;</mo>
+	   <mi>l</mi>
+	   <mo>&#x0003C;</mo>
+	   <mi>&#x003B4;</mi>
+       </mrow>
+   </math>
+   不成立，那就回到步驟 1 進行下一輪循環。
 
 等到上述過程從步驟 4 中跳出來結束的時候，我們找到的
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
@@ -919,140 +919,140 @@ $f(x)$
 
 所以，對於炒菜放鹽、利率選擇等等問題，更可行的算法是這樣的：
 1. 我們首先根據以往的經驗知道某個值
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>l</mi></mrow>
-  </math>
-  肯定小於最優值
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>m</mi></mrow>
-  </math>,
-  而另一個值
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>r</mi></mrow>
-  </math>
-  肯定大於
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>m</mi></mrow>
-  </math>.
-  這兩個值
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>l</mi></mrow>
-  </math>
-  和
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>r</mi></mrow>
-  </math>
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>l</mi></mrow>
+   </math>
+   肯定小於最優值
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>m</mi></mrow>
+   </math>,
+   而另一個值
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>r</mi></mrow>
+   </math>
+   肯定大於
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>m</mi></mrow>
+   </math>.
+   這兩個值
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>l</mi></mrow>
+   </math>
+   和
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>r</mi></mrow>
+   </math>
   就是孔子說舜「執其兩端」時的「兩端」。
 2. 我們選擇
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>l</mi></mrow>
-  </math>
-  和
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>r</mi></mrow>
-  </math>
-  的算術平均值（中點）
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mi>x</mi>
-	  <mo>&#x0003D;</mo>
-	  <mo stretchy="false">&#x00028;</mo>
-	  <mi>l</mi>
-	  <mo>&#x0002B;</mo>
-	  <mi>r</mi>
-	  <mo stretchy="false">&#x00029;</mo>
-	  <mo>&#x0002F;</mo>
-	  <mn>2</mn>
-      </mrow>
-  </math>
-  作爲本次的決策選擇，
-  這個中點
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>x</mi></mrow>
-  </math>
-  就是「用其中於民」以及「允執厥中」的「中」。
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>l</mi></mrow>
+   </math>
+   和
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>r</mi></mrow>
+   </math>
+   的算術平均值（中點）
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mi>x</mi>
+	   <mo>&#x0003D;</mo>
+	   <mo stretchy="false">&#x00028;</mo>
+	   <mi>l</mi>
+	   <mo>&#x0002B;</mo>
+	   <mi>r</mi>
+	   <mo stretchy="false">&#x00029;</mo>
+	   <mo>&#x0002F;</mo>
+	   <mn>2</mn>
+       </mrow>
+   </math>
+   作爲本次的決策選擇，
+   這個中點
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>x</mi></mrow>
+   </math>
+   就是「用其中於民」以及「允執厥中」的「中」。
 3. 將上述中點
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>x</mi></mrow>
-  </math>
-  用作決策選擇之後，接下來觀察其後果，根據後果評估這個
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>x</mi></mrow>
-  </math>
-  究竟是小於
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>m</mi></mrow>
-  </math>
-  還是大於
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>m</mi></mrow>
-  </math>.
-  如果判定
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mi>x</mi>
-	  <mo>&#x0003C;</mo>
-	  <mi>m</mi>
-      </mrow>
-  </math>,
-  這就代表步驟 2 中的決策尚嫌不足，那就把
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>x</mi></mrow>
-  </math>
-  用作下一輪決策的
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>l</mi></mrow>
-  </math>,
-  然後回到步驟 1 再來一次決策；如果判定
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mi>x</mi>
-	  <mo>&#x0003E;</mo>
-	  <mi>m</mi>
-      </mrow>
-  </math>,
-  這就代表步驟 2 中的決策太猛，那就把
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>x</mi></mrow>
-  </math>
-  用作下一輪決策的
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow><mi>r</mi></mrow>
-  </math>,
-  然後回到步驟 1 再來一次決策；如果無法判斷究竟是
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mi>x</mi>
-	  <mo>&#x0003C;</mo>
-	  <mi>m</mi>
-      </mrow>
-  </math>
-  還是
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mi>x</mi>
-	  <mo>&#x0003E;</mo>
-	  <mi>m</mi>
-      </mrow>
-  </math>,
-  那就表示這個決策比較適中，可以暫時不用再進行下一輪決策，
-  直到事情的進一步發展逐步明晰究竟是
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mi>x</mi>
-	  <mo>&#x0003C;</mo>
-	  <mi>m</mi>
-      </mrow>
-  </math>
-  還是
-  <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-      <mrow>
-          <mi>x</mi>
-	  <mo>&#x0003E;</mo>
-	  <mi>m</mi>
-      </mrow>
-  </math>,
-  那時候再重新啓動下一輪決策。
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>x</mi></mrow>
+   </math>
+   用作決策選擇之後，接下來觀察其後果，根據後果評估這個
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>x</mi></mrow>
+   </math>
+   究竟是小於
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>m</mi></mrow>
+   </math>
+   還是大於
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>m</mi></mrow>
+   </math>.
+   如果判定
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mi>x</mi>
+	   <mo>&#x0003C;</mo>
+	   <mi>m</mi>
+       </mrow>
+   </math>,
+   這就代表步驟 2 中的決策尚嫌不足，那就把
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>x</mi></mrow>
+   </math>
+   用作下一輪決策的
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>l</mi></mrow>
+   </math>,
+   然後回到步驟 1 再來一次決策；如果判定
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mi>x</mi>
+	   <mo>&#x0003E;</mo>
+	   <mi>m</mi>
+       </mrow>
+   </math>,
+   這就代表步驟 2 中的決策太猛，那就把
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>x</mi></mrow>
+   </math>
+   用作下一輪決策的
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow><mi>r</mi></mrow>
+   </math>,
+   然後回到步驟 1 再來一次決策；如果無法判斷究竟是
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mi>x</mi>
+	   <mo>&#x0003C;</mo>
+	   <mi>m</mi>
+       </mrow>
+   </math>
+   還是
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mi>x</mi>
+	   <mo>&#x0003E;</mo>
+	   <mi>m</mi>
+       </mrow>
+   </math>,
+   那就表示這個決策比較適中，可以暫時不用再進行下一輪決策，
+   直到事情的進一步發展逐步明晰究竟是
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mi>x</mi>
+	   <mo>&#x0003C;</mo>
+	   <mi>m</mi>
+       </mrow>
+   </math>
+   還是
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+       <mrow>
+           <mi>x</mi>
+	   <mo>&#x0003E;</mo>
+	   <mi>m</mi>
+       </mrow>
+   </math>,
+   那時候再重新啓動下一輪決策。
 
 本人孤陋寡聞，沒有查到文獻中是否有這樣的算法，所以在此姑且把它叫做
 「廚師放鹽算法」。
