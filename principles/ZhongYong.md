@@ -773,7 +773,7 @@ $f(x)$
         <mi>&#x003C6;</mi>
 	<mo>&#x0003D;</mo>
 	<mfrac>
-	    <mrow><msqrt><mn>5</mn></msqrt><mo>&#x0002B;</mo><mn>1</mn></mrow>
+	    <mrow><mroot><mn>5</mn></mroot><mo>&#x0002B;</mo><mn>1</mn></mrow>
 	    <mrow><mn>2</mn></mrow>
 	</mfrac>
     </mrow>
