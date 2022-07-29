@@ -238,7 +238,7 @@
    遵循着類似於比特幣、以太幣的模式運行。
    這個門檻比率應當在設計中國幣運行協議的時候就固定好，把它設爲 1/2 可能並不好，
    設爲 2/3 或者黃金比率
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+   <math xmlns="http://www.w3.org/1998/Math/MathML">
        <mrow>
            <mi>&#x003C6;</mi>
 	   <mo>&#x0003D;</mo>
@@ -254,8 +254,7 @@
        </mrow>
    </math>
    的倒數
-   <math mode="display" xmlns="http://www.w3.org/1998/Math/MathML"
-   		display="block">
+   <math mode="display" xmlns="http://www.w3.org/1998/Math/MathML">
        <mrow>
            <mi>&#x003A6;</mi>
 	   <mo>&#x0003D;</mo>
