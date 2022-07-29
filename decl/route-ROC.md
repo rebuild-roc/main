@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="UTF-8">
-<!DOCTYPE math PUBLIC "-//W2C//DTD MathML 2.0//EN"
-	"http://www.w3.org/Math/DTD/mathml2/mathml2.dtd">
 # [信息時代的倒共建國線路圖](https://github.com/rebuild-roc/main/blob/master/decl/route-ROC.md)
 ——兼答上海部分企業家和投資人的公開信
 
@@ -285,10 +282,6 @@
          <mo>&it;</mo>
          <mn>0.618</mn>
        </mrow>
-       <annotation encoding="application/x-tex">
-         \Phi=\frac{1}{\varphi}
-	 =\frac{\sqrt{5}-1}{2}
-       </annotation>
      </semantics>
    </math>
    可能會更好。
