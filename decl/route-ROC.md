@@ -244,8 +244,9 @@
 	   <mo>&#x0003D;</mo>
 	   <mfrac>
 	       <mrow>
-	           <mroot><mn>5</mn></mroot>
-		   <mo>&#x0002B;</mo><mn>1</mn>
+	           <msqrt><mn>5</mn></msqrt>
+		   <mo>&plus;</mo>
+		   <mn>1</mn>
 	       </mrow>
 	       <mrow><mn>2</mn></mrow>
            </mfrac>
@@ -253,7 +254,8 @@
        </mrow>
    </math>
    的倒數
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+   <math mode="display" xmlns="http://www.w3.org/1998/Math/MathML"
+   		display="block">
        <mrow>
            <mi>&#x003A6;</mi>
 	   <mo>&#x0003D;</mo>
@@ -264,8 +266,9 @@
 	   <mo>&#x0003D;</mo>
 	   <mfrac>
 	       <mrow>
-	           <mroot><mn>5</mn></mroot>
-		   <mo>&#x02212;</mo><mn>1</mn>
+	           <msqrt><mn>5</mn></msqrt>
+		   <mo>&minus;</mo>
+		   <mn>1</mn>
 	       </mrow>
 	       <mrow><mn>2</mn></mrow>
 	   </mfrac>
