@@ -237,7 +237,42 @@
    聯邦中央銀行才有權干預中國幣的運行，否則中國幣將會轉入自治模式，
    遵循着類似於比特幣、以太幣的模式運行。
    這個門檻比率應當在設計中國幣運行協議的時候就固定好，把它設爲 1/2 可能並不好，
-   設爲 2/3 或者黃金比率（大約是 1.618）的倒數（大約是 0.618）可能會更好。
+   設爲 2/3 或者黃金比率
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+     <mrow>
+       <mi>&#x003C6;</mi>
+       <mo>&#x0003D;</mo>
+       <mfrac>
+         <mrow>
+           <msqrt><mrow><mn>5</mn></mrow></msqrt>
+           <mo>&#x0002B;</mo><mn>1</mn>
+         </mrow>
+         <mrow><mn>2</mn></mrow>
+       </mfrac>
+     </mrow>
+     <mrow><mo>&#x02248;</mo><mn>1.618</mn></mrow>
+   </math>
+   的倒數
+   <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+     <mrow>
+       <mi>&#x003A6;</mi>
+       <mo>&#x0003D;</mo>
+       <mfrac>
+         <mrow><mn>1</mn></mrow>
+	 <mrow><mi>&#x003C6;</mi></mrow>
+       </mfrac>
+       <mo>&#x0003D;</mo>
+       <mfrac>
+         <mrow>
+	   <msqrt><mrow><mn>5</mn></mrow></msqrt>
+	   <mo>&#x02212;</mo><mn>1</mn>
+	 </mrow>
+	 <mrow><mn>2</mn></mrow>
+       </mfrac>
+       <mo>&#x02248;</mo><mn>0.618</mn>
+     </mrow>
+   </math>
+   可能會更好。
 3. 以比特幣爲代表的公開賬本方式不可採用，最關鍵的原因是太過於消耗資源：
    如果使用公開賬本方式，那麼，以全國總人口十億計，區塊鏈的數據量將會以 GB
    （大約十億字節）爲單位迅速增長，對於當今智能手機的存儲量和數據交換能力而言，
