@@ -244,7 +244,7 @@
 	   <mo>&#x0003D;</mo>
 	   <mfrac>
 	       <mrow>
-	           <msqrt><mn>5</mn></msqrt>
+	           <mroot><mn>5</mn></mroot>
 		   <mo>&#x0002B;</mo><mn>1</mn>
 	       </mrow>
 	       <mrow><mn>2</mn></mrow>
@@ -264,7 +264,7 @@
 	   <mo>&#x0003D;</mo>
 	   <mfrac>
 	       <mrow>
-	           <msqrt><mn>5</mn></msqrt>
+	           <mroot><mn>5</mn></mroot>
 		   <mo>&#x02212;</mo><mn>1</mn>
 	       </mrow>
 	       <mrow><mn>2</mn></mrow>
