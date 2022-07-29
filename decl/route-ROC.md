@@ -261,27 +261,31 @@
    的倒數
    <math mode="display" xmlns="http://www.w3.org/1998/Math/MathML">
      <semantics>
-     <mrow>
-       <mi>&#x003A6;</mi>
-       <mo>&#x0003D;</mo>
-       <mfrac>
-         <mrow><mn>1</mn></mrow>
-	 <mrow><mi>&#x003C6;</mi></mrow>
-       </mfrac>
-       <mo>&#x0003D;</mo>
-       <mfrac>
-         <mrow>
-	   <msqrt><mn>5</mn></msqrt>
-	   <mo>&minus;</mo>
-	   <mn>1</mn>
-	 </mrow>
-	 <mrow><mn>2</mn></mrow>
-       </mfrac>
-       <mo>&it;</mo>
-       <mo>&#x02248;</mo>
-       <mo>&it;</mo>
-       <mn>0.618</mn>
-     </mrow>
+       <mrow>
+         <mi>&#x003A6;</mi>
+         <mo>&#x0003D;</mo>
+         <mfrac>
+           <mrow><mn>1</mn></mrow>
+	   <mrow><mi>&#x003C6;</mi></mrow>
+         </mfrac>
+         <mo>&#x0003D;</mo>
+         <mfrac>
+           <mrow>
+	     <msqrt><mn>5</mn></msqrt>
+	     <mo>&minus;</mo>
+	     <mn>1</mn>
+	   </mrow>
+	   <mrow><mn>2</mn></mrow>
+         </mfrac>
+         <mo>&it;</mo>
+         <mo>&#x02248;</mo>
+         <mo>&it;</mo>
+         <mn>0.618</mn>
+       </mrow>
+       <annotation encoding="application/x-tex">
+         \Phi=\frac{1}{\varphi}
+	 =\frac{\sqrt{5}-1}{2}
+       </annotation>
      </semantics>
    </math>
    可能會更好。
