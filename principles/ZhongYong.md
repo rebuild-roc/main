@@ -90,233 +90,36 @@
 
 顧名思義，優選或優化 (optimization) 就是在一些可供選擇的對象中尋找最好的那個。
 這些可供選擇的對象（在政治學領域通常表現爲策略，或者描述策略的量值）
-就構成了一個集合
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>X</mi></mrow>
-</math>,
-而評價這些對象的指標就是一個實數值函數。
+就構成了一個集合 $X$, 而評價這些對象的指標就是一個實數值函數。
 這樣，數學優化 (mathematical optimization) 這個概念就被抽象地定義爲：
-給定了集合
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>X</mi></mrow>
-</math>
-到實數集的某個映射（也就是
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>X</mi></mrow>
-</math>
-上的一個實數值函數）
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>f</mi></mrow>
-</math>,
-要在
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>X</mi></mrow>
-</math>
-中尋找一個點，以使
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>f</mi></mrow>
-</math>
-在該點達到最大值。
-我們所要尋找的這個點就是
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>f</mi></mrow>
-</math>
-的**最大值點**。
+給定了集合 $X$ 到實數集的某個映射（也就是 $X$ 上的一個實數值函數）$f$,
+要在 $X$ 中尋找一個點，以使 $f$ 在該點達到最大值。
+我們所要尋找的這個點就是 $f$ 的**最大值點**。
 
-一般性的數學優化的困難首先出於與集合
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>X</mi></mrow>
-</math>
-的複雜性，其次是函數
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>f</mi></mrow>
-</math>
-的性質。
-在應用上，選擇什麼樣的
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>f</mi></mrow>
-</math>
-本身就是一個困難，所以在現實中
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>X</mi></mrow>
-</math>
-經常只含有「是」和「否」或者「可」與「否」這麼兩個選擇，
+一般性的數學優化的困難首先出於與集合 $X$ 的複雜性，其次是函數 $f$ 的性質。
+在應用上，選擇什麼樣的 $f$ 本身就是一個困難，所以在現實中 $X$ 經常只含有
+「是」和「否」或者「可」與「否」這麼兩個選擇，
 但是決策者面對二元選擇經常會優柔寡斷，原因就是他不知道應當選擇哪個函數。
-但是我們這裏要討論的是中庸，二元選擇不在我們考慮之列，所以這裏要討論的集合
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>X</mi></mrow>
-</math>
-就可以簡單化爲一個閉區間
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mo stretchy="false">[</mo>
-	<mi>a</mi>
-	<mo>&#x0002C;</mo>
-	<mi>b</mi>
-	<mo stretchy="false">]</mo>
-    </mrow>
-</math>,
-對應的就是一個連續變量值的選擇，容許的最小值爲
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>a</mi></mrow>
-</math>,
-最大值爲
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>b</mi></mrow>
-</math>.
-爲了容易理解，我們把
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>f</mi></mrow>
-</math>
-也簡單地設定爲閉區間
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mo stretchy="false">[</mo>
-	<mi>a</mi>
-	<mo>&#x0002C;</mo>
-	<mi>b</mi>
-	<mo stretchy="false">]</mo>
-    </mrow>
-</math>
-上的單峯函數。
+但是我們這裏要討論的是中庸，二元選擇不在我們考慮之列，所以這裏要討論的集合 $X$
+就可以簡單化爲一個閉區間 $[a, b]$，
+對應的就是一個連續變量值的選擇，容許的最小值爲 $a$, 最大值爲 $b$.
+爲了容易理解，我們把 $f$ 也簡單地設定爲閉區間 $[a, b]$ 上的單峯函數。
 
 直觀地理解，單峯函數就是函數圖像只有一個高峯的那些函數，其相對精確的數學定義
 （但也不是最一般化的定義）如下。
-定義在實數集的某個子集
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>X</mi></mrow>
-</math>
-上的一元函數
-$f(x)$
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mi>f</mi>
-	<mo stretchy="false">&#x00028;</mo>
-	<mi>x</mi>
-	<mo stretchy="false">&#x00029;</mo>
-    </mrow>
-</math>
-叫做**單峯函數**
-(unimodal function)， 如果其定義域
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>X</mi></mrow>
-</math>
-中有一個值
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>m</mi></mrow>
-</math>
-滿足以下兩個條件：
-(1) 定義域內的
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <msub><mi>x</mi><mn>1</mn></msub>
-    </mrow>
-</math>
-和
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <msub><mi>x</mi><mn>2</mn></msub>
-    </mrow>
-</math>
-滿足
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <msub><mi>x</mi><mn>1</mn></msub>
-	<mo>&#x02264;</mo>
-	<msub><mi>x</mi><mn>2</mn></msub>
-	<mo>&#x02264;</mo>
-	<mi>m</mi>
-    </mrow>
-</math>
-時，
-一定有
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mi>f</mi>
-	<mo stretchy="false">&#x00028;</mo>
-	<msub><mi>x</mi><mn>1</mn></msub>
-	<mo stretchy="false">&#x00029;</mo>
-	<mo>&#x02264;</mo>
-	<mi>f</mi>
-	<mo stretchy="false">&#x00028;</mo>
-	<msub><mi>x</mi><mn>2</mn></msub>
-	<mo stretchy="false">&#x00029;</mo>
-	<mo>&#x02264;</mo>
-	<mi>f</mi>
-	<mo stretchy="false">&#x00028;</mo>
-	<mi>m</mi>
-	<mo stretchy="false">&#x00029;</mo>
-    </mrow>
-</math>;
-(2) 定義域內的
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><msub><mi>x</mi><mn>1</mn></msub></mrow>
-</math>
-和
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>
-</math>
-滿足
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mi>m</mi>
-	<mo>&#x02264;</mo>
-	<msub><mi>x</mi><mn>1</mn></msub>
-	<mo>&#x02264;</mo>
-	<msub><mi>x</mi><mn>2</mn></msub>
-    </mrow>
-</math>
-時，
-一定有
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mi>f</mi>
-	<mo stretchy="false">&#x00028;</mo>
-	<mi>m</mi>
-	<mo stretchy="false">&#x00029;</mo>
-	<mo>&#x02265;</mo>
-	<mi>f</mi>
-	<mo stretchy="false">&#x00028;</mo>
-	<msub><mi>x</mi><mn>1</mn></msub>
-	<mo stretchy="false">&#x00029;</mo>
-	<mo>&#x02265;</mo>
-	<mi>f</mi>
-	<mo stretchy="false">&#x00028;</mo>
-	<msub><mi>x</mi><mn>2</mn></msub>
-	<mo stretchy="false">&#x00029;</mo>
-    </mrow>
-</math>.
+定義在實數集的某個子集 $X$ 上的一元函數 $f(x)$ 叫做**單峯函數**
+(unimodal function)， 如果其定義域 $X$ 中有一個值 $m$ 滿足以下兩個條件：
+(1) 定義域內的 $x_1$ 和 $x_2$ 滿足 $x_1 \leq x_2 \leq m$ 時，
+一定有 $f(x_1) \leq f(x_2) \leq f(m)$;
+(2) 定義域內的 $x_1$ 和 $x_2$ 滿足 $m \leq x_1 \leq x_2$ 時，
+一定有 $f(m) \geq f(x_1) \geq f(x_2)$.
 容易證明，單峯函數在它的定義域內只有一個極大值點，其極大值同時也是它的最大值。
-這個最大值點就是
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>m</mi></mrow>
-</math>,
-也就是數學優化法所要尋找的目標.
+這個最大值點就是 $m$, 也就是數學優化法所要尋找的目標.
 
-下面提到的算法就是要在給定單峯函數
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>f</mi></mrow>
-</math>
-的前提下找出其最大值點
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>m</mi></mrow>
-</math>.
-在實際操作的層面上，由於算法只能實施有限次，所以，用這些算法只能逼近
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>m</mi></mrow>
-</math>,
-而不能精確地找到
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>m</mi></mrow>
-</math>.
-另外，這些算法也不需要知道
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>f</mi></mrow>
-</math>
-的具體函數形式，只要在整個過程中
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>f</mi></mrow>
-</math>
+下面提到的算法就是要在給定單峯函數 $f$ 的前提下找出其最大值點 $m$.
+在實際操作的層面上，由於算法只能實施有限次，所以，用這些算法只能逼近 $m$,
+而不能精確地找到 $m$.
+另外，這些算法也不需要知道 $f$ 的具體函數形式，只要在整個過程中 $f$
 保持不便即可。
 這在應用於決策時就非常重要。以上面的利率調整爲例，人們並不知道利率對決策目標
 （例如物價指數的穩定值）的影響到底是什麼樣子——用數學語言來說就是，
@@ -331,581 +134,74 @@ $f(x)$
 （實際上這種依賴關係還會因爲品菜人的不同而不同），但這不影響我們掌握鹽的用量
 ——一個學習做菜的人只要試驗幾次就可以找到比較好的用鹽量（但不一定是最佳值）。
 
-由於具體尋找（或逼近
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>m</mi></mrow>
-</math>
+由於具體尋找（或逼近）$m$
 的方法很多，這裏我們只介紹正規理論中的三分法和黃金分割法。
 此外，我們還要介紹第三種算法，與三分法和黃金分割法的出發點差別很大。
 
 ### 1. 三分法
 
-給定了某個區間
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mo stretchy="false">[</mo>
-	<mi>a</mi>
-	<mo>&#x0002C;</mo>
-	<mi>b</mi>
-	<mo stretchy="false">]</mo>
-    </mrow>
-</math>
-上的單峯函數
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>f</mi></mrow>
-</math>,
-三分法 (ternary search) 就是尋找
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>f</mi></mrow>
-</math>
-的最大值點
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>m</mi></mrow>
-</math>
-的最樸素的想法。它的思路是這樣的：從一開始我們就確信
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>m</mi></mrow>
-</math>
-在區間
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mo stretchy="false">[</mo>
-	<mi>a</mi>
-	<mo>&#x0002C;</mo>
-	<mi>b</mi>
-	<mo stretchy="false">]</mo>
-    </mrow>
-</math>
-中，也就是說，有
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mi>a</mi>
-	<mo>&#x02264;</mo>
-	<mi>m</mi>
-	<mo>&#x02264;</mo>
-	<mi>b</mi>
-    </mrow>
-</math>.
-令
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>l</mi></mrow>
-</math>
-和
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>r</mi></mrow>
-</math>
-兩個數分別代表我們搜尋
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>m</mi></mrow>
-</math>
-的區間的左右兩個端點，
-那麼在一開始的時候我們的搜索區間就是整個定義域
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mo stretchy="false">[</mo>
-	<mi>a</mi>
-	<mo>&#x0002C;</mo>
-	<mi>b</mi>
-	<mo stretchy="false">]</mo>
-    </mrow>
-</math>,
-所以令
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mi>l</mi>
-	<mo>&#x0003D;</mo>
-	<mi>a</mi>
-    </mrow>
-</math>
-和
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mi>r</mi>
-	<mo>&#x0003D;</mo>
-	<mi>b</mi>
-    </mrow>
-</math>,
-隨後進入以下循環過程。
-1. 把區間
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-	   <mo stretchy="false">[</mo>
-	   <mi>l</mi>
-	   <mo>&#x0002C;</mo>
-	   <mi>r</mi>
-	   <mo stretchy="false">]</mo>
-       </mrow>
-   </math>
-   分爲三段，也就是說，要取兩個數
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><msub><mi>x</mi><mn>1</mn></msub></mrow>
-   </math>
-   和
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>
-   </math>
-   使之把區間
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-	   <mo stretchy="false">[</mo>
-	   <mi>l</mi>
-	   <mo>&#x0002C;</mo>
-	   <mi>r</mi>
-	   <mo stretchy="false">]</mo>
-       </mrow>
-   </math>
-   分爲長度相等的三段
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-	   <mo stretchy="false">[</mo>
-	   <mi>l</mi>
-	   <mo>&#x0002C;</mo>
-	   <msub><mi>x</mi><mn>1</mn></msub>
-	   <mo stretchy="false">]</mo>
-       </mrow>
-   </math>
-   和
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-	   <mo stretchy="false">[</mo>
-	   <msub><mi>x</mi><mn>1</mn></msub>
-	   <mo>&#x0002C;</mo>
-	   <msub><mi>x</mi><mn>2</mn></msub>
-	   <mo stretchy="false">]</mo>
-      </mrow>
-   </math>
-   以及
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-	   <mo stretchy="false">[</mo>
-	   <msub><mi>x</mi><mn>2</mn></msub>
-	   <mo>&#x0002C;</mo>
-	   <mi>r</mi>
-	   <mo stretchy="false">]</mo>
-       </mrow>
-   </math>；
-2. 計算
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-	   <mi>f</mi>
-	   <mo stretchy="false">&#x00028;</mo>
-	   <msub><mi>x</mi><mn>1</mn></msub>
-	   <mo stretchy="false">&#x00029;</mo>
-       </mrow>
-   </math>
-   和
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-	   <mi>f</mi>
-	   <mo stretchy="false">&#x00028;</mo>
-	   <msub><mi>x</mi><mn>2</mn></msub>
-	   <mo stretchy="false">&#x00029;</mo>
-       </mrow>
-   </math>
-   的數值；
-3. 如果
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-	   <mi>f</mi>
-	   <mo stretchy="false">&#x00028;</mo>
-	   <msub><mi>x</mi><mn>1</mn></msub>
-	   <mo stretchy="false">&#x00029;</mo>
-	   <mo>&#x0003C;</mo>
-	   <mi>f</mi>
-	   <mo stretchy="false">&#x00028;</mo>
-	   <msub><mi>x</mi><mn>2</mn></msub>
-	   <mo stretchy="false">&#x00029;</mo>
-       </mrow>
-   </math>,
-   這就意味着
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>f</mi></mrow>
-   </math>
-  的最大值點
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>m</mi></mrow>
-   </math>
-   在區間
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mo stretchy="false">[</mo>
-	   <msub><mi>x</mi><mn>1</mn></msub>
-	   <mo>&#x0002C;</mo>
-	   <mi>r</mi>
-	   <mo stretchy="false">]</mo>
-       </mrow>
-   </math>
-   內，所以，我們把
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>l</mi></mrow>
-   </math>
-   的值改爲
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><msub><mi>x</mi><mn>1</mn></msub></mrow>
-   </math>；
-   如果
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mi>f</mi>
-	   <mo stretchy="false">&#x00028;</mo>
-	   <msub><mi>x</mi><mn>1</mn></msub>
-	   <mo stretchy="false">&#x00029;</mo>
-	   <mo>&#x0003E;</mo>
-	   <mi>f</mi>
-	   <mo stretchy="false">&#x00028;</mo>
-	   <msub><mi>x</mi><mn>2</mn></msub>
-	   <mo stretchy="false">&#x00029;</mo>
-       </mrow>
-   </math>,
-   這就意味着
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>f</mi></mrow>
-   </math>
-   的最大值點
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>m</mi></mrow>
-   </math>
-   在區間
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mo stretchy="false">[</mo>
-	   <mi>l</mi>
-	   <mo>&#x0002C;</mo>
-	   <msub><mi>x</mi><mn>2</mn></msub>
-	   <mo stretchy="false">]</mo>
-       </mrow>
-   </math>
-   內，
-   所以，此時我們把
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>r</mi></mrow>
-   </math>
-   的值改爲
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>
-   </math>；
-   如果
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mi>f</mi>
-	   <mo stretchy="false">&#x00028;</mo>
-	   <msub><mi>x</mi><mn>1</mn></msub>
-	   <mo stretchy="false">&#x00029;</mo>
-	   <mo>&#x0003D;</mo>
-	   <mi>f</mi>
-	   <mo stretchy="false">&#x00028;</mo>
-	   <msub><mi>x</mi><mn>2</mn></msub>
-	   <mo stretchy="false">&#x00029;</mo>
-       </mrow>
-   </math>,
-   這就意味着
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>f</mi></mrow>
-   </math>
-   的最大值點
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>m</mi></mrow>
-   </math>
-   在區間
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mo stretchy="false">[</mo>
-	   <msub><mi>x</mi><mn>1</mn></msub>
-	   <mo>&#x0002C;</mo>
-	   <msub><mi>x</mi><mn>2</mn></msub>
-	   <mo stretchy="false">]</mo>
-       </mrow>
-   </math>
-   內，
-   所以，此時我們把
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>l</mi></mrow>
-   </math>
-   和
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>r</mi></mrow>
-   </math>
-   的值分別改爲
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><msub><mi>x</mi><mn>1</mn></msub></mrow>
-   </math>
-   和
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>
-   </math>；
-4. 理論上，從這裏跳轉到上述的步驟 1, 那就可以利用更短的區間
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mo stretchy="false">[</mo>
-	   <mi>l</mi>
-	   <mo>&#x0002C;</mo>
-	   <mi>r</mi>
-	   <mo stretchy="false">]</mo>
-       </mrow>
-   </math>
-   進行下一輪循環了。將這個循環無限進行下去，理論上可以把
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>m</mi></mrow>
-   </math>
-   的值給確定下來。
+給定了某個區間 $[a, b]$ 上的單峯函數 $f$, 三分法 (ternary search) 就是尋找
+$f$ 的最大值點 $m$ 的最樸素的想法。它的思路是這樣的：從一開始我們就確信
+$m$ 在區間 $[a, b]$ 中，也就是說，有 $a \leq m \leq b$.
+令 $l$ 和 $r$ 兩個數分別代表我們搜尋 $m$ 的區間的左右兩個端點，
+那麼在一開始的時候我們的搜索區間就是整個定義域 $[a, b]$,
+所以令 $l = a$ 和 $r = b$, 隨後進入以下循環過程。
+1. 把區間 $[l, r]$ 分爲三段，也就是說，要取兩個數 $x_1$ 和 $x_2$
+   使之把區間 $[l, r]$ 分爲長度相等的三段 $[l, x_1]$ 和 $[x_1, x_2]$ 以及
+   $[x_2, r]$；
+2. 計算 $f(x_1)$ 和 $f(x_2)$ 的數值；
+3. 如果 $f(x_1) < f(x_2)$, 這就意味着 $f$ 的最大值點 $m$ 在區間 $[x_1, r]$
+   內，所以，我們把 $l$ 的值改爲 $x_1$；
+   如果 $f(x_1) > f(x_2)$, 這就意味着 $f$ 的最大值點 $m$ 在區間 $[l, x_2]$
+   內，所以，此時我們把 $r$ 的值改爲 $x_2$；
+   如果 $f(x_1) = f(x_2)$, 這就意味着 $f$ 的最大值點 $m$ 在區間 $[x_1, x_2]$
+   內，所以，此時我們把 $l$ 和 $r$ 的值分別改爲 $x_1$ 和 $x_2$；
+4. 理論上，從這裏跳轉到上述的步驟 1, 那就可以利用更短的區間 $[l, r]$
+   進行下一輪循環了。將這個循環無限進行下去，理論上可以把 $m$ 的值給確定下來。
    但是在實際操作上，我們不可能陷於無限循環中，必須要在適當的時候跳出這個循環。
-   這就需要事先設定一個精度
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>&#x003B4;</mi></mrow>
-   </math>
-   （這是一個相當小的正數），
-   當一個循環進行到這一步時，我們就比較一下是否有
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mi>r</mi>
-	   <mo>&#x02212;</mo>
-	   <mi>l</mi>
-	   <mo>&#x0003C;</mo>
-	   <mi>&#x003B4;</mi>
-       </mrow>
-   </math>
-   成立，
-   如果成立，則把
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>m</mi></mrow>
-   </math>
-   的值近似設定爲
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mo stretchy="false">&#x00028;</mo>
-	   <mi>l</mi>
-	   <mo>&#x0002B;</mo>
-	   <mi>r</mi>
-	   <mo stretchy="false">&#x00029;</mo>
-	   <mo>&#x0002F;</mo>
-	   <mn>2</mn>
-       </mrow>
-   </math>,
-   然後退出循環結束整個過程；
-   如果
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mi>r</mi>
-	   <mo>&#x02212;</mo>
-	   <mi>l</mi>
-	   <mo>&#x0003C;</mo>
-	   <mi>&#x003B4;</mi>
-       </mrow>
-   </math>
-   不成立，那就回到步驟 1 進行下一輪循環。
+   這就需要事先設定一個精度 $\delta$ （這是一個相當小的正數），
+   當一個循環進行到這一步時，我們就比較一下是否有 $r - l < \delta$ 成立:
+   如果成立，則把 $m$ 的值近似設定爲 $(l + r)/2$, 然後退出循環結束整個過程；
+   如果 $r - l < \delta$ 不成立，那就回到步驟 1 進行下一輪循環。
 
-等到上述過程從步驟 4 中跳出來結束的時候，我們找到的
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>m</mi></mrow>
-</math>
-的近似值與其精確值的差不會超過
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>&#x003B4;</mi></mrow>
-</math>,
-這就是我們稱後者爲精度的原因。
+等到上述過程從步驟 4 中跳出來結束的時候，我們所找到的 $m$ 的近似值與其精確值
+(即 $m$) 的差不會超過 $\delta$, 這就是我們稱後者爲精度的原因。
 
 
 ### 2. 黃金分割法
 
 1953 年，美國的數理統計學家 Jack Kiefer 給出了搜尋單峯函數最大值點的黃金分割法
 (golden-section search)。
-這個方法和上面描述的三分法是很相似的，只不過在步驟 1 中選取
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><msub><mi>x</mi><mn>1</mn></msub></mrow>
-</math>
-和
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>
-</math>
-的時候，要求這兩個點把區間
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mo stretchy="false">[</mo>
-	<mi>l</mi>
-	<mo>&#x0002C;</mo>
-	<mi>r</mi>
-	<mo stretchy="false">]</mo>
-    </mrow>
-</math>
-所分成的三段區間
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mo stretchy="false">[</mo>
-	<mi>l</mi>
-	<mo>&#x0002C;</mo>
-	<msub><mi>x</mi><mn>1</mn></msub>
-	<mo stretchy="false">]</mo>
-    </mrow>
-</math>
-和
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mo stretchy="false">[</mo>
-	<msub><mi>x</mi><mn>1</mn></msub>
-	<mo>&#x0002C;</mo>
-	<msub><mi>x</mi><mn>2</mn></msub>
-	<mo stretchy="false">]</mo>
-    </mrow>
-</math>
-以及
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mo stretchy="false">[</mo>
-	<msub><mi>x</mi><mn>2</mn></msub>
-	<mo>&#x0002C;</mo>
-	<mi>r</mi>
-	<mo stretchy="false">]</mo>
-    </mrow>
-</math>
-的長度之比爲
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mi>&#x003C6;</mi>
-	<mi>&#x0003A;</mi>
-	<mn>1</mn>
-	<mi>&#x0003A;</mi>
-	<mi>&#x003C6;</mi>
-    </mrow>
-</math>
+這個方法和上面描述的三分法是很相似的，只不過在步驟 1 中選取 $x_1 < x_2$
+的時候，要求這兩個點把區間 $[l, r]$ 所分成的三段區間 $[l, x_1]$ 和 $[x_1, x_2]$
+以及 $[x_2, r]$ 的長度之比爲 $\varphi \colon 1 \colon \varphi$,
 其中
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-    <mrow>
-        <mi>&#x003C6;</mi>
-	<mo>&#x0003D;</mo>
-	<mfrac>
-	    <mrow><mroot><mn>5</mn></mroot><mo>&#x0002B;</mo><mn>1</mn></mrow>
-	    <mrow><mn>2</mn></mrow>
-	</mfrac>
-    </mrow>
-</math>
+```math
+\varphi = \frac{\sqrt{5} + 1}{2}
+```
 是赫赫有名的黃金比值 (golden ratio)，也有人稱之爲黃金分割比。
-這個比值的倒數精確地等於
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mi>&#x003C6;</mi>
-	<mo>&#x02212;</mo>
-	<mn>1</mn>
-    </mrow>
-</math>,
-在國內有很多人把
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mn>1</mn><mo>&#x0002F;</mo><mi>&#x003C6;</mi></mrow>
-</math>
-也就是
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mi>&#x003C6;</mi>
-	<mo>&#x02212;</mo>
-	<mn>1</mn>
-    </mrow>
-</math>
-叫做黃金分割比。
-容易計算，
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>&#x003C6;</mi></mrow>
-</math>
-的近似值是
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mn>1.618</mn></mrow>
-</math>
-所以
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mn>1</mn>
-	<mo>&#x0002F;</mo>
-	<mi>&#x003C6;</mi>
-    </mrow>
-</math>
-的近似值就是
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mn>0.618</mn></mrow>
-</math>.
+這個比值的倒數精確地等於 $\varphi - 1$, 在國內有很多人把後者（也就是
+$1/\varphi$）叫做黃金分割比。
+容易計算，$\varphi$ 的近似值是 $1.618$, 所以 $1/\varphi$ 的近似值就是 $0.618$.
 華羅庚先生在上世紀六七十年代在工廠中推廣這個方法，稱這個方法爲「0.618 法」。
 
-容易看出，三分法的一個循環完成後，在一般的情形下，搜尋區間
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mo stretchy="false">[</mo>
-	<mi>l</mi>
-	<mo>&#x0002C;</mo>
-	<mi>r</mi>
-	<mo stretchy="false">]</mo>
-    </mrow>
-</math>
+容易看出，三分法的一個循環完成後，在一般的情形下，搜尋區間 $[l, r]$
 的長度會縮短爲循環前的長度的三分之二；如果步驟 3 中的最後一種情形（即
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mi>f</mi>
-	<mo stretchy="false">&#x00028;</mo>
-	<msub><mi>x</mi><mn>1</mn></msub>
-	<mo stretchy="false">&#x00029;</mo>
-	<mo>&#x0003D;</mo>
-	<mi>f</mi>
-	<mo stretchy="false">&#x00028;</mo>
-	<msub><mi>x</mi><mn>2</mn></msub>
-	<mo stretchy="false">&#x00029;</mo>
-    </mrow>
-</math>
-的情形）發生，則一個循環完成後，搜尋區間可以縮小爲循環前的
+$f(x_1) = f(x_2)$ 的情形）發生，則一個循環完成後，搜尋區間可以縮小爲循環前的
 長度的三分之一。類似地，考察黃金分割法會發現，在一般情況下，一個循環完成後，
-搜尋區間的長度會縮短爲循環前的
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow>
-        <mn>1</mn>
-	<mo>&#x0002F;</mo>
-	<mi>&#x003C6;</mi>
-    </mrow>
-</math>,
-這個值大約爲
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mn>0.618</mn></mrow>
-</math>,
-比
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mn>2</mn><mo>&#x0002F;</mo><mn>3</mn></mrow>
-</math>
-小，
+搜尋區間的長度會縮短爲循環前的 $1/\varphi$, 這個值比 $2/3$ 小，
 所以黃金分割法的效率要比三分法高那麼一點。
 
 
 ### 3. 廚師放鹽算法
 
 以上介紹的三分法和黃金分割法只是數學優化法中的兩種，其他算法我們不再多說。
-看得出，它們和中庸之道有共通的地方就是在兩個極端值（最初是端點
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>a</mi></mrow>
-</math>
-和
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>b</mi></mrow>
-</math>,
-後來則是每次循環的區間端點
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>l</mi></mrow>
-</math>
-和
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-    <mrow><mi>r</mi></mrow>
-</math>）之間取值，但也有不同之處：
-* 三分法和黃金分割法要在中間取兩個值
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><msub><mi>x</mi><mn>1</mn></msub></mrow>
-   </math>
-   和
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><msub><mi>x</mi><mn>2</mn></msub></mrow>
-   </math>,
-   而中庸之道則是取一個值
+看得出，它們和中庸之道有共通的地方就是在兩個極端值（最初是端點 $a$ 和 $b$,
+後來則是每次循環的區間端點 $l$ 和 $r$）之間取值，但也有不同之處：
+* 三分法和黃金分割法要在中間取兩個值 $x_1$ 和 $x_2$, 而中庸之道則是取一個值
   （執其兩端，用其中於民）；
-* 三分法和黃金分割法（乃至整個數學優化理論）中
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>f</mi></mrow>
-   </math>
-   是知道的，
-   而且可以用它來計算各個點的函數值，而政治中要決策的問題背後的函數
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>f</mi></mrow>
-   </math>
+* 三分法和黃金分割法（乃至整個數學優化理論）中 $f$ 是知道的，
+   而且可以用它來計算各個點的函數值，而政治中要決策的問題背後的函數 $f$
    往往是不知道的，更不可能用它來計算函數值。
 
 因爲以上兩點，數學優化中的各種算法對政治領域並不一定適用，
@@ -918,140 +214,20 @@ $f(x)$
 在政治領域的決策（例如利率政策）就更是如此。
 
 所以，對於炒菜放鹽、利率選擇等等問題，更可行的算法是這樣的：
-1. 我們首先根據以往的經驗知道某個值
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>l</mi></mrow>
-   </math>
-   肯定小於最優值
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>m</mi></mrow>
-   </math>,
-   而另一個值
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>r</mi></mrow>
-   </math>
-   肯定大於
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>m</mi></mrow>
-   </math>.
-   這兩個值
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>l</mi></mrow>
-   </math>
-   和
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>r</mi></mrow>
-   </math>
-  就是孔子說舜「執其兩端」時的「兩端」。
-2. 我們選擇
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>l</mi></mrow>
-   </math>
-   和
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>r</mi></mrow>
-   </math>
-   的算術平均值（中點）
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mi>x</mi>
-	   <mo>&#x0003D;</mo>
-	   <mo stretchy="false">&#x00028;</mo>
-	   <mi>l</mi>
-	   <mo>&#x0002B;</mo>
-	   <mi>r</mi>
-	   <mo stretchy="false">&#x00029;</mo>
-	   <mo>&#x0002F;</mo>
-	   <mn>2</mn>
-       </mrow>
-   </math>
+1. 我們首先根據以往的經驗知道某個值 $l$ 肯定小於最優值 $m$,
+   而另一個值 $r$ 肯定大於 $m$.
+   這兩個值 $l$ 和 $r$ 就是孔子說舜「執其兩端」時的「兩端」。
+2. 我們選擇 $l$ 和 $r$ 的算術平均值（中點）$x = (l + r)/2$
    作爲本次的決策選擇，
-   這個中點
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>x</mi></mrow>
-   </math>
-   就是「用其中於民」以及「允執厥中」的「中」。
-3. 將上述中點
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>x</mi></mrow>
-   </math>
-   用作決策選擇之後，接下來觀察其後果，根據後果評估這個
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>x</mi></mrow>
-   </math>
-   究竟是小於
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>m</mi></mrow>
-   </math>
-   還是大於
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>m</mi></mrow>
-   </math>.
-   如果判定
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mi>x</mi>
-	   <mo>&#x0003C;</mo>
-	   <mi>m</mi>
-       </mrow>
-   </math>,
-   這就代表步驟 2 中的決策尚嫌不足，那就把
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>x</mi></mrow>
-   </math>
-   用作下一輪決策的
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>l</mi></mrow>
-   </math>,
-   然後回到步驟 1 再來一次決策；如果判定
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mi>x</mi>
-	   <mo>&#x0003E;</mo>
-	   <mi>m</mi>
-       </mrow>
-   </math>,
-   這就代表步驟 2 中的決策太猛，那就把
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>x</mi></mrow>
-   </math>
-   用作下一輪決策的
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow><mi>r</mi></mrow>
-   </math>,
-   然後回到步驟 1 再來一次決策；如果無法判斷究竟是
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mi>x</mi>
-	   <mo>&#x0003C;</mo>
-	   <mi>m</mi>
-       </mrow>
-   </math>
-   還是
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mi>x</mi>
-	   <mo>&#x0003E;</mo>
-	   <mi>m</mi>
-       </mrow>
-   </math>,
+   這個中點 $x$ 就是「用其中於民」以及「允執厥中」的「中」。
+3. 將上述中點 $x$ 用作決策選擇之後，接下來觀察其後果，根據後果評估這個 $x$
+   究竟是小於 $m$ 還是大於 $m$.
+   如果判定 $x < m$, 這就代表步驟 2 中的決策尚嫌不足，那就把 $x$
+   用作下一輪決策的 $l$, 然後回到步驟 1 再來一次決策；如果判定 $x > m$,
+   這就代表步驟 2 中的決策太猛，那就把 $x$ 用作下一輪決策的 $r$,
+   然後回到步驟 1 再來一次決策；如果無法判斷究竟是 $x < m$ 還是 $x > m$,
    那就表示這個決策比較適中，可以暫時不用再進行下一輪決策，
-   直到事情的進一步發展逐步明晰究竟是
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mi>x</mi>
-	   <mo>&#x0003C;</mo>
-	   <mi>m</mi>
-       </mrow>
-   </math>
-   還是
-   <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
-       <mrow>
-           <mi>x</mi>
-	   <mo>&#x0003E;</mo>
-	   <mi>m</mi>
-       </mrow>
-   </math>,
+   直到事情的進一步發展逐步明晰究竟是 $x < m$ 還是 $x > m$,
    那時候再重新啓動下一輪決策。
 
 本人孤陋寡聞，沒有查到文獻中是否有這樣的算法，所以在此姑且把它叫做
