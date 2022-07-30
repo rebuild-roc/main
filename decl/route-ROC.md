@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="UTF-8">
-<!DOCTYPE math PUBLIC "-//W2C//DTD MathML 2.0//EN"
-	"http://www.w3.org/Math/DTD/mathml2/mathml2.dtd">
 # [信息時代的倒共建國線路圖](https://github.com/rebuild-roc/main/blob/master/decl/route-ROC.md)
 ——兼答上海部分企業家和投資人的公開信
 
@@ -242,54 +239,42 @@
    這個門檻比率應當在設計中國幣運行協議的時候就固定好，把它設爲 1/2 可能並不好，
    設爲 2/3 或者黃金比率
    <math xmlns="http://www.w3.org/1998/Math/MathML">
-     <semantics>
-     <mrow>
-       <mi>&#x003C6;</mi>
-       <mo>&#x0003D;</mo>
-       <mfrac>
-         <mrow>
-	   <msqrt><mn>5</mn></msqrt>
-	   <mo>&plus;</mo>
-	   <mn>1</mn>
-	 </mrow>
-	 <mrow><mn>2</mn></mrow>
-       </mfrac>
-       <mo>&it;</mo>
-       <mo>&#x02248;</mo>
-       <mo>&it;</mo>
-       <mn>1.618</mn>
-     </mrow>
-     </semantics>
+     <mi>&#x003C6;</mi>
+     <mo>&#x0003D;</mo>
+     <mfrac>
+       <mrow>
+	 <msqrt><mn>5</mn></msqrt>
+	 <mo>&plus;</mo>
+	 <mn>1</mn>
+       </mrow>
+       <mrow><mn>2</mn></mrow>
+     </mfrac>
+     <mo>&it;</mo>
+     <mo>&#x02248;</mo>
+     <mo>&it;</mo>
+     <mn>1.618</mn>
    </math>
    的倒數
    <math mode="display" xmlns="http://www.w3.org/1998/Math/MathML">
-     <semantics>
+     <mi>&#x003A6;</mi>
+     <mo>&#x0003D;</mo>
+     <mfrac>
+       <mrow><mn>1</mn></mrow>
+       <mrow><mi>&#x003C6;</mi></mrow>
+     </mfrac>
+     <mo>&#x0003D;</mo>
+     <mfrac>
        <mrow>
-         <mi>&#x003A6;</mi>
-         <mo>&#x0003D;</mo>
-         <mfrac>
-           <mrow><mn>1</mn></mrow>
-	   <mrow><mi>&#x003C6;</mi></mrow>
-         </mfrac>
-         <mo>&#x0003D;</mo>
-         <mfrac>
-           <mrow>
-	     <msqrt><mn>5</mn></msqrt>
-	     <mo>&minus;</mo>
-	     <mn>1</mn>
-	   </mrow>
-	   <mrow><mn>2</mn></mrow>
-         </mfrac>
-         <mo>&it;</mo>
-         <mo>&#x02248;</mo>
-         <mo>&it;</mo>
-         <mn>0.618</mn>
+         <msqrt><mn>5</mn></msqrt>
+	 <mo>&minus;</mo>
+	 <mn>1</mn>
        </mrow>
-       <annotation encoding="application/x-tex">
-         \Phi=\frac{1}{\varphi}
-	 =\frac{\sqrt{5}-1}{2}
-       </annotation>
-     </semantics>
+       <mrow><mn>2</mn></mrow>
+     </mfrac>
+     <mo>&it;</mo>
+     <mo>&#x02248;</mo>
+     <mo>&it;</mo>
+     <mn>0.618</mn>
    </math>
    可能會更好。
 3. 以比特幣爲代表的公開賬本方式不可採用，最關鍵的原因是太過於消耗資源：
