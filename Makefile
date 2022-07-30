@@ -80,6 +80,7 @@ GIT = git
 REMOTE_GITHUB = github
 REMOTE_IDK_I2P = idk
 BRANCHES_TO_SYNC = master draft
+IDK_BRANCHES_TO_SYNC = idk-master idk-draft
 
 help:
 	@head -n $$((`grep -n PHONY $(MAKEFILE_LIST) | cut --delimiter=: -f 1 | head -n 1` -1)) $(MAKEFILE_LIST) | less
@@ -89,12 +90,12 @@ clean:
 
 create:
 	$(TORSOCKS) $(TORSOCKS_OPT) $(GIT) push -u $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
-	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) push -u $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
+	$(GIT) push -u $(REMOTE_IDK_I2P) $(IDK_BRANCHES_TO_SYNC)
 
 push pull fetch:
 	$(TORSOCKS) $(TORSOCKS_OPT) $(GIT) $@ $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
-	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) $@ $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
+	$(GIT) $@ $(REMOTE_IDK_I2P) $(IDK_BRANCHES_TO_SYNC)
 
 push-forced:
 	$(TORSOCKS) $(TORSOCKS_OPT) $(GIT) push --force $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
-	http_proxy=http://$(I2P_PROXY_IP):4444 $(GIT) push --forced $(REMOTE_IDK_I2P) $(BRANCHES_TO_SYNC)
+	$(GIT) push --forced $(REMOTE_IDK_I2P) $(IDK_BRANCHES_TO_SYNC)
