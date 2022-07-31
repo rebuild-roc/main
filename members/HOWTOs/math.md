@@ -23,6 +23,9 @@
    (repository) 對應於不同的本地倉庫者。
 
 
+
+## 本地倉庫的配置
+
 如果以上三個條件都違反了，也就是說，以下三個條件同時成立：
 * 使用 idk （或其他基於 GitLab 技術的代碼託管網站）託管項目；
 * 在上述託管項目的文檔中使用數學公式；
@@ -31,9 +34,53 @@
 
 則可以借鑑以下方法配置本地倉庫。
 
+假設我們在本地倉庫中把 GitHub 上的對應倉庫命名爲 `github`,
+把 idk 上的對應倉庫命名爲 `idk`, 那麼， `github` 中的某個分支 `bbb`
+（例如 `master` 或 `draft` 或 `devel` 之類的分支名稱）
+對應於您的本地倉庫中的分支 ``ghb-bbb`,
+而 `idk` 上的分支 `bbb` （和 `github` 中的分支 `bbb`
+對應，只是在公式的代碼上有所區別）對應於您本地倉庫中的分支 ``idk-bbb`.
+在上述情景下，您本地倉庫的文件 `.git/config` 中應當有如下幾塊內容：
 
+一是關於 `github` 的
+```
+[remote "github"]
+        url = https://github.com/xxx/yyy.git
+        fetch = +refs/heads/ghb-*:refs/remotes/github/*
+        tagopt = --tags
+```
 
-## 本地倉庫的配置
+二是關於 `idk` 的
+```
+[remote "idk"]
+        url = http://git.idk.i2p/xxx/yyy
+        fetch = +refs/heads/idk-*:refs/remotes/idk/*
+        tagOpt = --tags
+        proxy = http://10.0.2.2:4444
+```
+
+三是關於本地分支 `ghb-bbb` 的
+```
+[branch "ghb-bbb"]
+        remote = github
+        merge = refs/heads/bbb
+```
+以及關於本地分支 `idk-bbb` 的
+```
+[branch "idk-bbb"]
+        remote = idk
+        merge = refs/heads/bbb
+```
+
+四是關於本地倉庫上傳時的行爲的
+```
+[push]
+        default = upstream
+```
+
+需要注意：
+* 以上幾塊代碼相互之間的次序不重要，也不一定是相互緊鄰的；
+* 每一個代碼塊中縮進的行都是用製表符（`Tab`）縮進的。
 
 
 
