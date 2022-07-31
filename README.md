@@ -170,6 +170,7 @@
     * [如何建立和配置安全的工作環境 (II)](members/HOWTOs/single-vm.md)
     * [如何創建和配置自己的本地及遠端 Repo](members/HOWTOs/repo-config.md)
     * [項目分叉 (Forking) 與合作](members/HOWTOs/forking.md)
+    * [使用 TeX 代碼編制數學公式時的注意事項](members/HOWTOs/math.md)
 6. 腳本（詳細說明載於該目錄下的文件 [README.md](members/scripts/README.md)）
     * [Makefile](members/scripts/Makefile)
     * [完全開放防火牆的腳本](member/scripts/open-firewall)
