@@ -30,3 +30,25 @@
    (repository) 對應於同一個本地倉庫，
 
 則可以借鑑以下方法配置本地倉庫。
+
+
+
+## 本地倉庫的配置
+
+
+
+## GitHub 和 GitLab 對 TeX 數學公式代碼的不同要求
+
+可以分別參考
+
+<https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions>
+
+和
+
+<https://docs.gitlab.com/ee/user/markdown.html#math>
+
+以及其中的鏈接。
+至於如何用 TeX/LaTeX 排版數學公式，現在有大量的資料可以查閱。
+如果手頭上沒有現成的，可以到網上搜索一些簡介文章速成，或者到
+<https://tug.org> 上尋找合適的文檔系統地學習。
+**僅就排版數學公式而言，速成即可。**
