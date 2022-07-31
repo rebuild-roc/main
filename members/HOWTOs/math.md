@@ -37,18 +37,19 @@
 假設我們在本地倉庫中把 GitHub 上的對應倉庫命名爲 `github`,
 把 idk 上的對應倉庫命名爲 `idk`, 那麼， `github` 中的某個分支 `bbb`
 （例如 `master` 或 `draft` 或 `devel` 之類的分支名稱）
-對應於您的本地倉庫中的分支 ``ghb-bbb`,
+對應於您的本地倉庫中的分支 `bbb`,
 而 `idk` 上的分支 `bbb` （和 `github` 中的分支 `bbb`
-對應，只是在公式的代碼上有所區別）對應於您本地倉庫中的分支 ``idk-bbb`.
+對應，只是在公式的代碼上有所區別）對應於您本地倉庫中的分支 `idk-bbb`.
 在上述情景下，您本地倉庫的文件 `.git/config` 中應當有如下幾塊內容：
 
 一是關於 `github` 的
 ```
 [remote "github"]
         url = https://github.com/xxx/yyy.git
-        fetch = +refs/heads/ghb-*:refs/remotes/github/*
+        fetch = +refs/heads/*:refs/remotes/github/*
         tagopt = --tags
 ```
+其中 `xxx` 是您在 GitHub 上的用戶名，而 `yyy` 則是 `github` 所對應的倉庫名。
 
 二是關於 `idk` 的
 ```
@@ -58,6 +59,8 @@
         tagOpt = --tags
         proxy = http://10.0.2.2:4444
 ```
+其中 `xxx` 是您在 <http://git.idk.i2p> 上的用戶名，而 `yyy` 則是
+`idk` 所對應的倉庫名。
 
 三是關於本地分支 `ghb-bbb` 的
 ```
