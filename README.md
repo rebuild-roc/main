@@ -143,8 +143,9 @@
 
           原 <https://cyber-china.blogspot.com/> 和
 	  <https://github.com/infcn/blog>
-          中的文章，HTML 格式（可下載後用瀏覽器閱讀），作於 2015 年，一字未改
-	  收錄於此。文章中所列網址、email 地址以及 openPGP 密鑰等目前一概停用，
+          中的文章，[HTML 格式](principles/outline-2015.html)（可下載後用瀏覽器閱讀），
+	  作於 2015 年，一字未改收錄於此。
+	  文章中所列網址、email 地址以及 openPGP 密鑰等目前一概停用，
 	  未來若啟用時，會用我現在的 openPGP 密鑰和該文中的 openPGP 密鑰共同
 	  簽署一份啟用說明。
         * [常見問題](members/HOWTOs/faq.md)
@@ -158,6 +159,7 @@
     * [關於國號的考慮以及與臺灣的關係](topics/ROC.md)
     * [如何看待習近平禪位的傳聞](topics/abdication.md)
 4. 文告
+    * [信息時代的倒共建國線路圖](decl/route-ROC.md)
     * [上海部分企業家和投資人的公開信(轉載)](decl/Shanghai-20220530.md)
     * [致共軍官兵的公開信](decl/to-PLA.md)
 5. 與參與者密切相關的文章
