@@ -182,9 +182,7 @@ $m$ 在區間 $[a, b]$ 中，也就是說，有 $a \leq m \leq b$.
 $[x_1, x_2]$ 以及 $[x_2, r]$ 的長度之比爲
 $\varphi \colon 1 \colon \varphi$,
 其中
-```math
-\varphi = \frac{\sqrt{5} + 1}{2}
-```
+$$\varphi = \frac{\sqrt{5} + 1}{2}$$
 是赫赫有名的黃金比值 (golden ratio)，也有人稱之爲黃金分割比。
 這個比值的倒數精確地等於 $\varphi - 1$, 在國內有很多人把後者（也就是
 $1/\varphi$）叫做黃金分割比。
