@@ -48,7 +48,7 @@
 ```
 [remote "github"]
         url = https://github.com/xxx/yyy.git
-        fetch = +refs/heads/ghb-*:refs/remotes/github/*
+        fetch = +refs/heads/*:refs/remotes/github/*
         tagopt = --tags
 ```
 其中 `xxx` 是您在 GitHub 上的用戶名，而 `yyy` 則是 `github` 所對應的倉庫名。
@@ -57,7 +57,7 @@
 ```
 [remote "idk"]
         url = http://git.idk.i2p/xxx/yyy
-        fetch = +refs/heads/idk-*:refs/remotes/idk/*
+        fetch = +refs/heads/*:refs/remotes/idk/*
         tagOpt = --tags
         proxy = http://10.0.2.2:4444
 ```
