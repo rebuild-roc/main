@@ -104,8 +104,10 @@
 $ git log --oneline --graph --all -decorate --date-oder
 ```
 得到，只是在繪製時我們把上述命令的輸出橫着畫，並有所簡化而已。
-在命令行代碼中，起始的符號 `$`
+在命令行代碼中，起始的符號 “`$`”
 為命令提示符，由操作系統給出而且其具體形式變化萬千，用戶不需要從鍵盤輸入。
+當我們給出一個命令行時，用戶從提示符後面的第一個非空白字符開始輸入，
+直到輸入完畢後，再按下回車鍵 (Return 或 Enter 鍵) 即可。
 
 接下來我們打算編輯其中某個文件，使之含有數學公式。
 這就意味着 `ghb-bbb` 和 `idk-bbb` 將要出現分岔。
@@ -126,7 +128,7 @@ $ git log --oneline --graph --all -decorate --date-oder
    `topic` 這個分支，那麼我們在 `idk-bbb` 這個分支（現在它指向 commit `A`）
    中用命令行
    ```
-   $ git -b topic
+   $ git checkout -b topic
    ```
    創建並切換到 `topic` 這個新的分支。不管以上哪種選擇，現在的狀況是
    ```
@@ -139,7 +141,7 @@ $ git log --oneline --graph --all -decorate --date-oder
 
    -----B    topic <- HEAD
        /
-   ---A    ghb-bbb  idk-bbb
+   ---A      ghb-bbb  idk-bbb
 
    ```
    其中後一種情況出現在 `topic` 為舊有分支而且不能直接推進到 `idk-bbb` 的情形。
@@ -151,7 +153,7 @@ $ git log --oneline --graph --all -decorate --date-oder
 
    -----B--C    topic <- HEAD
        /
-   ---A    ghb-bbb  idk-bbb
+   ---A         ghb-bbb  idk-bbb
 
    ```
 3. 為了清晰和便於日後維護，我們用
@@ -164,18 +166,25 @@ $ git log --oneline --graph --all -decorate --date-oder
    把 commit `C` 合併到分支 `idk-bbb` 和 `ghb-bbb` 中，其結果如下：
    ```
 
-   -----B--C     topic  ghb-bbb <- HEAD
+   -----B--C        topic  ghb-bbb <- HEAD
        /    \
-   ---A------C'  idk-bbb
+   ---A------C'     idk-bbb
 
    ```
 4. 接下來，我們要按照 GitHub 的要求編輯數學表達式。如上圖所示，我們現在處於
    `ghb-bbb` 這個分支中，所以直接編輯步驟 2 中所編輯的那些文件，把其中類似於
-   `$\`a+b=c\`$` 這樣的表達式改為 `$a+b=c$`，把類似於
    ```
-   \`\`\`math
+   $`a+b=c`$
+   ```
+   這樣的表達式改為
+   ```
+   $a+b=c$
+   ```
+   把類似於
+   ```
+   ```math
    E=m c^2
-   \`\`\`
+   ```
    ```
    這樣的表達式相應地改為
    ```
@@ -187,11 +196,11 @@ $ git log --oneline --graph --all -decorate --date-oder
    ```
    提交，結果如下圖所示：
    ```
-             --C"   ghb-bbb <- HEAD
+             --C"      ghb-bbb <- HEAD
             /
-   -----B--C       topic
+   -----B--C           topic
        /    \
-   ---A------C'    idk-bbb
+   ---A------C'        idk-bbb
 
    ```
 5. 以後再編輯文件時，我們先切換回分支 `topic`，如果有數學表達式則按照 GitLab
@@ -227,11 +236,11 @@ $ git log --oneline --graph --all -decorate --date-oder
    GitHub 的要求進行修改（可以參考步驟 4 中的例子），修改完成後提交，
    其結果如下：
    ```
-             --C"-----------------E"--F  ghb-bbb <- HEAD
+             --C"-----------------E"---F      ghb-bbb <- HEAD
             /                 /
-   -----B--C-----D--- ... ---E           topic
+   -----B--C-----D--- ... ---E                topic
        /    \                 \
-   ---A------C'----------------E'        idk-bbb
+   ---A------C'----------------E'             idk-bbb
 
    ```
 7. 若有必要，則用下述命令推送到 GitHub 和 `idk` 的遠端倉庫中：
