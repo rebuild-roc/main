@@ -183,7 +183,8 @@ $ git log --oneline --graph --all -decorate --date-oder
    把類似於
    ```
    ```math
-   E=m c^2 ```
+   E=m c^2
+    ```
    ```
    這樣的表達式相應地改為
    ```
