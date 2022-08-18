@@ -722,7 +722,7 @@ DNA。在當前階段，用到指紋和面容識別就足夠了。
 民主化之後的中國除了時刻防範公權力的做大，還要始終防範資本的做大。
 尤其是在企業中，一定要抑制資本獨大。
 關於這個方面的話題，我在
-[《股份制公司的三本——資本、智本與人本》](https://github.com/rebuild-roc/main/blob/master/topics/three-components.md)
+[《股份制公司的三本——資本、智本與人本》](https://github.com/rebuild-roc/main/blob/master/principles/three-components.md)
 中有較為詳細的討論，未來有新的想法也會在那裡更改。這裡只說其中主要的想法。
 
 首先，這裏所說的資本，是指企業運行過程中，在任何階段所投入的不可撤回的資金（即投資）、固定資產、非固定資產等各種實物性的資源。
