@@ -1,7 +1,7 @@
 # 信息時代的中國社會架構
 ## ——平定共亂、光復民國[總體規劃與協調](https://github.com/rebuild-roc/main)
 
-[*English version*](./README-en.md) not available yet.
+[*English version*](./README-en.md)
 
 
 這個平臺的目標不是鼓動反共，而是策劃如何利用信息技術推翻中共，
