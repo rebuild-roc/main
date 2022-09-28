@@ -78,8 +78,10 @@ I2P_PROXY_IP = 10.0.2.2
 GIT = git
 
 REMOTE_GITHUB = github
+REMOTE_GITLAB = gitlab
 REMOTE_IDK_I2P = idk
 BRANCHES_TO_SYNC = master draft
+LAB_BRANCHES_TO_SYNC = lab-master lab-draft
 IDK_BRANCHES_TO_SYNC = idk-master idk-draft
 
 help:
@@ -94,8 +96,10 @@ create:
 
 push pull fetch:
 	$(TORSOCKS) $(TORSOCKS_OPT) $(GIT) $@ $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
+	$(TORSOCKS) $(TORSOCKS_OPT) $(GIT) $@ $(REMOTE_GITLAB) $(LAB_BRANCHES_TO_SYNC)
 	$(GIT) $@ $(REMOTE_IDK_I2P) $(IDK_BRANCHES_TO_SYNC)
 
 push-forced:
 	$(TORSOCKS) $(TORSOCKS_OPT) $(GIT) push --force $(REMOTE_GITHUB) $(BRANCHES_TO_SYNC)
+	$(TORSOCKS) $(TORSOCKS_OPT) $(GIT) push --force $(REMOTE_GITLAB) $(LAB_BRANCHES_TO_SYNC)
 	$(GIT) push --forced $(REMOTE_IDK_I2P) $(IDK_BRANCHES_TO_SYNC)
