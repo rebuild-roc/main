@@ -1,5 +1,4 @@
 # [信息時代的倒共建國線路圖](https://github.com/rebuild-roc/main/blob/master/decl/route-ROC.md)
-——兼答上海部分企業家和投資人的公開信
 
 [戡亂復國](mailto:rebld-roc@protonmail.com)
 
