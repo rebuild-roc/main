@@ -12,7 +12,7 @@
     [single-vm-firewall](single-vm-firewall)
     就會首先調用本腳本），**單獨使用是非常危險的！**
 * [single-vm-firewall](single-vm-firewall)：設置 Linux 系統
-    防火牆的 bash 腳本，主要用戶虛擬機（如[《如何建立和配置安全的工作環境
+    防火牆的 bash 腳本，主要用於虛擬機（如[《如何建立和配置安全的工作環境
     (II)》](../HOWTOs/single-vm.md)中所描述的那樣），也可以用於任何 Linux 主機。
     防火牆規則概覽：
     * 只放行對特定域名服務器的訪問；
