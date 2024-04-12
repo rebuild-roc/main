@@ -1,6 +1,6 @@
 # 如何建立和配置安全的工作環境 (II)
 
-[戡亂復國](mailto:rebuild-roc@ctemplar.com)
+[戡亂復國](mailto:rebld-roc@protonmail.com)
 
 **內容提要：**
 

@@ -1,6 +1,6 @@
 # 平亂行動簡要
 
-[戡亂復國](mailto:rebuild-roc@ctemplar.com)
+[戡亂復國](mailto:rebld-roc@protonmail.com)
 
 
 中共集團兼具黑幫、匪幫、傳銷集團和邪教等很多特點，在它七十餘年的非法統治下，中國

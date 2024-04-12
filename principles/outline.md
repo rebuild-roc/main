@@ -1,6 +1,6 @@
 # [平亂行動概略](https://github.com/rebuild-roc/main/principles/outline.md)
 
-[**戡亂復國**](mailto:rebuild-roc@ctemplar.com)
+[**戡亂復國**](mailto:rebld-roc@protonmail.com)
 
 
 這篇文章不打算討論推翻中共的理由，而是要概略地陳述一下我所設計的推翻中共的方法，
