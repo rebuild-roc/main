@@ -1,6 +1,6 @@
 # 如何創建和配置自己的本地及遠端 Repo
 
-[戡亂復國](mailto:rebuild-roc@ctemplar.com)
+[戡亂復國](mailto:rebld-roc@protonmail.com)
 
 **內容提要：**
 本文主要介紹如何通過自己的本地主機在 [GitHub](https://github.com) 和/或
@@ -264,7 +264,7 @@ $ git config user.name "Rebuilding ROC (戡亂復國)"
 對於 email 設置，建議您採用提交給 GitHub 的公開的 email。以我本人為例，就這樣
 設置：
 ```
-$ git config user.email rebuild-roc@ctemplar.com
+$ git config user.email rebld-roc@protonmail.com
 ```
 要注意：GitHub 和 GitLab 都支持多個 email 地址，而且還支持私密 email 地址（即
 GitHub 或 GitLab 知道但不會公布給其他用戶的您的 email 地址）。如果您存在這種
@@ -286,7 +286,7 @@ $ gpg -K
 ```
 sec   rsa4096 2020-01-22 [SC]
       2403FA48459184CBAC3B19335497541008807CA8
-uid           [ultimate] Rebuilding ROC (戡亂復國) <rebuild-roc@ctemplar.com>
+uid           [ultimate] Rebuilding ROC (戡亂復國) <rebld-roc@protonmail.com>
 ssb   rsa4096 2020-01-22 [E]
 ```
 我們就以其中第二行（即密鑰的**指紋**，fingerprint）內最右面的八個十六進制數字
@@ -307,7 +307,7 @@ core.filemode=true
 core.bare=false
 core.logallrefupdates=true
 user.name=Rebuilding ROC (戡亂復國)
-user.email=rebuild-roc@ctemplar.com
+user.email=rebld-roc@protonmail.com
 user.signingkey=0x08807CA8
 ```
 其中最後三行就是我們上面設置的結果。

@@ -1,6 +1,6 @@
 # [討中共及習近平檄](https://github.com/rebuild-roc/main/decl/to-all.md)
 
-### [戡亂復國](https://github.com/rebuild-roc)
+### [戡亂復國](mailto:rebld-roc@protonmail.com)
 
 ## 中共
     * 賣國集團
