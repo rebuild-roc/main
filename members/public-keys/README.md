@@ -4,7 +4,7 @@
 
  密鑰 ID |密鑰文件 | GitHub 用戶名 | GitLab 用戶名 | 所有人 | 密鑰所有人的 email | 用途 | 到期日 | 備註
  --------|---------|---------------|---------------|--------|--------------------|------|---------|--
- 0x08807CA8 | `rebuild-roc` | [rebuild-roc](https://github.com/rebuild-roc) | [rebuild-roc](https://gitlab.com/rebuild-roc) | 戡亂復國 | rebuild-roc@ctemplar.com | ESC | 無限期 | 主密鑰
+ 0x08807CA8 | `rebuild-roc` | [rebuild-roc](https://github.com/rebuild-roc) | [rebuild-roc](https://gitlab.com/rebuild-roc) | 戡亂復國 | rebld-roc@protonmail.com | ESC | 無限期 | 主密鑰
 
 表格說明：
 * 密鑰 ID ——統一規定為密鑰指紋中的最後八位十六進制數字，並以 `0x` 作前綴。
@@ -44,8 +44,8 @@
 ```
 pub   rsa4096 2020-01-22 [SC]
       2403 FA48 4591 84CB AC3B  1933 5497 5410 0880 7CA8
-uid           [ultimate] to Rebuild ROC (戡亂復國) <rebuild-roc@ctemplar.com>
-uid           [ultimate] Rebuilding ROC (戡亂復國) <rebuild-roc@ctemplar.com>
+uid           [ultimate] to Rebuild ROC (戡亂復國) <rebld-roc@protonmail.com>
+uid           [ultimate] Rebuilding ROC (戡亂復國) <rebld-roc@protonmail.com>
 sub   rsa4096 2020-01-22 [E]
 
 ```

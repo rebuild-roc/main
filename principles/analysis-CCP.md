@@ -1,6 +1,6 @@
 # 中共的政治是毒蠱政治
 
-[**戡亂復國**](mailto:rebuild-roc@ctemplar.com)
+[**戡亂復國**](mailto:rebld-roc@protonmail.com)
 
 ## 一、中共的政治體制在性質上可能是一種全新的品種
 

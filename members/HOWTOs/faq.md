@@ -30,7 +30,7 @@
 1. 能否透露發起人的基本信息？
 
     **答：**
-    發起人的代號（筆名）是戡亂復國，基本的 email 地址是 rebuild-roc@ctemplar.com
+    發起人的代號（筆名）是戡亂復國，基本的 email 地址是 rebld-roc@protonmail.com
 
     發起人在 [GitHub](https://github.com) 和 [GitLab](https://gitlab.com)
     上的用戶名都是 `rebuild-roc`，可以分別瀏覽
