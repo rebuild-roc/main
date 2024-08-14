@@ -88,6 +88,7 @@
 1. [寫在武漢肺炎爆發之際（代前言）](./preface.md)
 2. 原理性、規劃方面的文章
     * [第六個現代化：造反手段的現代化](principles/6th-modernization.md)
+    * [發動羣衆迷思與恨民情緒批判——兼談普朗克原理](principles/Planck.md)
     * [為什麼不稱革命而稱為「平亂行動」？](principles/action-name.md)
     * 平亂行動的總體介紹
         * [平亂行動簡要](principles/brief-intro.md)
