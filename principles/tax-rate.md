@@ -15,43 +15,44 @@
 $p r_{\rm tax}$.
 
 如果稅金由賣方支付，則有
-\begin{equation}
+```math
 p = p r_{\rm tax} + c + c r_{\rm prof}\, ,
-\end{equation}
+```
 於是得到賣家的稅後利潤率
-\begin{equation}
+```math
 r_{\rm prof} = \frac{p}{c} (1 - r_{\rm tax}) - 1 \, .
-\end{equation}
+```
 在這宗交易中，
-\begin{equation}
+```math
 r = \frac{p}{c} - 1
-\end{equation}
+```
 是買家所負擔的溢價率.  所以, 賣家的稅後利潤率與買家所負擔的溢價率之間的關係是
-\begin{equation}
+```math
 r_{\rm prof} = r (1 - r_{\rm tax}) - r_{\rm tax} \, , \qquad r = \frac{r_{\rm prof} + r_{\rm tax}}{1 - r_{\rm tax}} \, .
-\end{equation}
+```
 在這種供給側徵稅的情況下，一旦稅率 $r_{\rm tax} \geqslant 1$, 買家的稅後利潤率就只能是 $r_{\rm prof} \leqslant -1$, 也就是虧損率超過 100%.
 只要稅率 $r_{\rm tax} < 1$, 理論上賣家總是可以通過提高售價把稅金轉嫁到買家身上，從而實現正的利潤率。
 
 如果稅金由買家支付，則有
-\begin{equation}
+```math
 p = c + c r_{\rm prof} \, ,
-\end{equation}
+```
 而買家所負擔的溢價率為
-\begin{equation}
+```math
 r' = \frac{p + p r_{\rm tax}}{c} - 1 = \frac{p}{c} (1 + r_{\rm tax}) - 1 \, .
-\end{equation}
+```
 由上述兩個等式得到
-\begin{equation}
+```math
 r' = (1 + r_{\rm prof})(1 + r_{\rm tax}) - 1 \, ,
-\end{equation}
+```
 從而有
-\begin{equation}
+```math
 r' = r_{\rm prof} + r_{\rm tax} + r_{\rm prof} \, r_{\rm tax} \, , \qquad r_{\rm prof} = \frac{r' - r_{\rm tax}}{1 + r_{\rm tax}} \, .
-\end{equation}
+```
 在這種消費側的徵稅方式中，理論上稅率是沒有限制的，無論徵收多高，賣方都可以實現盈利。
 
 當稅率 $r_{\rm tax}$ 和賣方的稅後利潤率 $r_{\rm prof}$ 保持不變時, 我們來比較一下 $r$ 和 $r'$ 的大小。如果 $|r_{\rm tax}|$ 很小，我們可以通過泰勒展開得到
+```math
 \begin{alignat}{1}
   r - r'
   &= \frac{r_{\rm prof} + r_{\rm tax}}{1 - r_{\rm tax}}
@@ -65,8 +66,10 @@ r' = r_{\rm prof} + r_{\rm tax} + r_{\rm prof} \, r_{\rm tax} \, , \qquad r_{\rm
   + \cdots
   \, ,
 \end{alignat}
+```
 可見 $r > r'$ (除非 $r_{\rm tax} < 0$ 而且補貼的額度非常高).
 事實上, 如果嚴格地推算, 則
+```math
 \begin{alignat}{1}
   r - r'
   &= \frac{
@@ -81,7 +84,9 @@ r' = r_{\rm prof} + r_{\rm tax} + r_{\rm prof} \, r_{\rm tax} \, , \qquad r_{\rm
         - r_{\rm prof} \, r_{\rm tax} \, (1 - r_{\rm tax})
       }{1 - r_{\rm tax}}
 \end{alignat}
+```
 給出
+```math
 \begin{alignat}{1}
   r - r'
   &= \frac{
@@ -89,6 +94,7 @@ r' = r_{\rm prof} + r_{\rm tax} + r_{\rm prof} \, r_{\rm tax} \, , \qquad r_{\rm
       }{1 - r_{\rm tax}}
   \, .
 \end{alignat}
+```
 可見, 除非商家或廠家瘋了不想賺錢, 或者由於得到了補貼而讓利, 總之, 除非
 $r_{\rm prof} \leqslant -1$, 否則一定有 $r > r'$.
 不難理解, 當 $r_{\rm prof} = 0$ 時, 商家或廠家就是在白送商品給賣方;
