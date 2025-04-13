@@ -57,7 +57,8 @@ r' = r_{\rm prof} + r_{\rm tax} + r_{\rm prof} \, r_{\rm tax} \, , \qquad r_{\rm
   r - r'
   &= \frac{r_{\rm prof} + r_{\rm tax}}{1 - r_{\rm tax}}
   - (r_{\rm prof} + r_{\rm tax} + r_{\rm prof} \, r_{\rm tax})
-  = (r_{\rm prof} + r_{\rm tax})
+  \nonumber \\
+  &= (r_{\rm prof} + r_{\rm tax})
     \bigg( 1 + r_{\rm tax} + \frac{1}{2} \, r_{\rm tax}^{2} + \cdots \bigg)
   - (r_{\rm prof} + r_{\rm tax} + r_{\rm prof} \, r_{\rm tax})
   \nonumber \\
