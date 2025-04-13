@@ -63,7 +63,7 @@ r' = r_{\rm prof} + r_{\rm tax} + r_{\rm prof} \, r_{\rm tax} \, , \qquad r_{\rm
   - (r_{\rm prof} + r_{\rm tax} + r_{\rm prof} \, r_{\rm tax})
   \nonumber \\
   &= r_{\rm tax}^{2}
-  + \frac{1}{2} \, e t^{2}
+  + \frac{1}{2} \, r_{\rm prof} r_{\rm tax}^{2}
   + \cdots
   \, ,
 \end{alignat}
